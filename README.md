@@ -1,2 +1,2 @@
-# LaTeXMaterials
-I have around 15 years experience rendering math documents using LaTeX.  This repository contains lecture notes, other Beamer presentations, and images drawn using TikZ.
+# AcademiaMaterials
+Throughout my career in academia I have used `html` to build websites and a LOT of LaTeX to render math documents.  This repository is a showcase of some of the materials I have produced over my 9 year period as a visiting assistant professor, with some materials dating back to grad school.  
