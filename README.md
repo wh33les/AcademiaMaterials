@@ -8,7 +8,7 @@ The GroupTheoryLectures are from MSRI-UP in 2016.
 
 JMM2014 is a talk I gave at the Joint Math Meetings on my thesis project.  I couldn't find the source file.  The slides use a lot of TikZ.
 
-he n5t3r4 file is the output from some code I had written in Macaulay2 (M2) during grad school.  M2 is not made for Windows, so I had to use an emulator and emacs to run it.
+The n5t3r4 file is the output from some code I had written in Macaulay2 (M2) during grad school.  M2 is not made for Windows, so I had to use an emulator and emacs to run it.
 
 The StuCATalk file is notes from a talk I did in grad school.  At the time, my advisor was using PlainTeX to write all his notes so I learned how to use it, too, to make my notes look like his.
 
