@@ -6,6 +6,8 @@ The ArkansasWebsite folder contains the files for my website from University of 
 
 The GroupTheoryLectures are from MSRI-UP in 2016.
 
+The cal2fa20Lectures are lectures I made when I taught calc II remotely at Mount Holyoke College.  I lost the source file.
+
 JMM2014 is a talk I gave at the Joint Math Meetings on my thesis project.  I couldn't find the source file.  The slides use a lot of TikZ.
 
 The n5t3r4 file is the output from some code I had written in Macaulay2 (M2) during grad school.  M2 is not made for Windows, so I had to use an emulator and emacs to run it.
