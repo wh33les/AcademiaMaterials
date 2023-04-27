@@ -1,0 +1,700 @@
+\input amstex
+
+% to keep URLs from badboxing:
+\input miniltx
+\expandafter\def\expandafter\+\expandafter{\+}
+\input url.sty
+
+\magnification=\magstep1 
+\documentstyle{amsppt}
+\hsize=6.5truein
+\vsize=8.9truein
+\hoffset=.55 truein
+\voffset=.7 truein
+\loadeurm
+\loadbold
+\NoBlackBoxes
+\font\twbf=cmbx10 scaled\magstep2
+\font\chbf=cmbx10 scaled\magstep1
+\font\hdbf=cmbx10
+\font\mb=cmmib10                      %%% bold math italic
+\font\smrm=cmr7  
+       
+
+%%% Macros %%%
+
+% Greek Letter Shortcuts %
+\define\gka{\alpha}
+\define\gkb{\beta}
+\define\gkc{\gamma}
+\define\gkd{\delta}
+\define\gke{\epsilon}
+\define\gkf{\varphi} % curly phi
+\define\gkh{\eta}
+\define\gki{\iota}
+\define\gkk{\kappa}
+\define\gkl{\lambda}
+\define\gkm{\mu}
+\define\gkn{\nu}
+\define\gkp{\pi}
+\define\gkr{\rho}
+\define\gks{\sigma}
+\define\gkt{\tau}
+\define\gkth{\theta}
+\define\gkw{\omega}
+\define\gkz{\zeta}
+
+% Blackboard Bolds %
+\define\Aff{{\Bbb A}} % affine space
+\define\C{{\Bbb C}} % complex numbers
+\define\N{{\Bbb N}} % natural numbers
+\define\Prj{{\Bbb P}} % projective space
+\define\Q{{\Bbb Q}} % rational numbers
+\define\R{{\Bbb R}} % real numbers
+\define\Z{{\Bbb Z}} % integers
+
+% Non-Italic Operators %
+\define\Ann{\hbox{\rm Ann}} % annihilator
+\define\Ass{\hbox{\rm Ass}} % associated primes
+\redefine\char{\hbox{\rm char}} % characteristic
+\define\codim{\hbox{\rm codim}} % codimension
+\define\Coker{\hbox{\rm Coker}} % cokernel
+\define\depth{\hbox{\rm depth}} % depth
+\define\dirlim{\underarrow{\hbox{\rm lim}}} % direct limit
+\define\Ext{\hbox{\rm Ext}} % Ext
+\define\gcf{\hbox{\rm gcf}} % greatest common factor
+\define\gr{\hbox{\rm gr}} % associated graded ring (algebra?)
+\define\Grass{\hbox{\rm Grass}} % Grassmannian
+\define\hd{\hbox{\rm hd}} % homological dimension
+\define\Hom{\hbox{\rm Hom}} % Hom
+\define\img{\hbox{\rm img}} % image
+\define\invlim{\underleftarrow{\hbox{\rm lim}}} % inverse limit
+\define\Ker{\hbox{\rm Ker}} % kernel
+\define\rad{\hbox{\rm rad}} % radical
+\define\rank{\hbox{\rm rank}} % rank
+\define\Soc{\hbox{\rm Soc}} % socle
+\define\Spec{\hbox{\rm Spec}} % prime spectrum
+\define\Supp{\hbox{\rm Supp}} % support
+\define\Sym{\hbox{\rm Sym}} % symmetric algebra
+\redefine\Supp{\hbox{\rm Supp}} % support
+\define\Tor{\hbox{\rm Tor}} % Tor
+\define\wgdim{\hbox{\rm w.gl.dim}} % weak global dimension
+
+% Text Shortcuts %
+\define\chp{{characteristic $p$}}
+\define\chz{{characteristic zero}}
+\define\CM{{Cohen-Macaulay}}
+\define\Cor{{Corollary}}
+\define\Def{{Definition}}
+\define\dvr{{discrete valuation ring}}
+\define\Exe{{Exercise}}
+\define\fg{{finitely generated}}
+\redefine\iff{{if and only if}}
+\define\Not{{Notation}}
+\define\nz{{nonzero}}
+\define\pid{{principal ideal domain}}
+\define\pf{\demo{Proof}}
+\define\Prop{{Proposition}}
+\redefine\qed{$\square$\enddemo}
+\define\Rmk{{Remark}}
+\define\Sol{{Solution}}
+\define\sop{{system of parameters}}
+\define\Thm{{Theorem}}
+\define\zd{{zero divisor}}
+\define\zds{{zero divisors}}
+
+% Symbol Shortcuts %
+\define\1{^{-1}} % inverse
+\define\8{^{\infty}} % infinite dimension  
+\redefine\bar#1{\overline{#1}} % longer bar
+\define\cnt{\supseteq} % contains
+\define\coh{^{\bullet}} % cohomology
+\define\du{^{\vee}} % dual
+\define\dud{^{\vee\vee}} % double dual  
+\define\ho{_{\bullet}} % homology
+\define\inc{\subseteq} % inclusion
+\define\inj{\hookrightarrow} % injects into
+\predefine\iso{\cong} % isomorphic to
+%\define\ov#1{\overset{#1}{\to}} % overset
+\define\st{\,\left|\right.\,} % such that 
+\define\surj{\twoheadrightarrow} % surjects onto
+\define\tns{\otimes} % tensor product
+\define\un#1{\underline{#1}} % underline
+\define\({\left(} % use these for nested parentheses
+\define\){\right)}
+\define\<{\langle}
+\define\>{\rangle}
+\define\[{\lbrack}
+\define\]{\rbrack}
+
+% Dots %
+\define\capdts{\cap\,\cdots\,\cap} % intersections
+\define\cntdts{\supseteq\,\cdots\,\supseteq} % containment sequence
+\define\cupdts{\cup\,\cdots\,\cup} % unions
+\define\incdts{\subseteq\,\cdots\,\subseteq} % inclusion sequence
+\define\plsdts{+\,\cdots\,+} % sum
+\define\seq{,\,\dots\,,} % sequence
+
+% Other Macros %
+\define\part#1{\item\item{(#1)}} % for itemized lists
+\define\hai{\hangindent 20pt} % hanging indent
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                                       %%% The document starts here (WYSIWYG). %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\NoPageNumbers
+%\headline{\ifnum\pageno=1{}\else\centerline{\rm LOCAL COHOMOLOGY AND $D$-MODULES}\fi}
+%\rightheadline{\ifnum\pageno=1{}\else\centerline{\rm LOCAL COHOMOLOGY AND $D$-MODULES}\fi}
+\nologo         
+\parindent = 20 pt
+\centerline{\bf LOCAL COHOMOLOGY AND $D$-MODULES} \hfill\break
+\centerline{(talk given at the University of Michigan Student Commutative Algebra Seminar)}\hfill
+\centerline{4 \& 11 October, 2011} \hfill
+\centerline{by Ashley K. Wheeler} \hfill
+%\centerline{\it Last modified: } \hfill
+
+\bigskip
+
+This talk follows the first half of Mel Hochster's notes {\it $D$-modules and Lyubeznik's Finiteness Theorems for Local Cohomology}, which you can find on his website \url{http://www.math.lsa.umich.edu/~hochster}.  The material is hard, so much so that I do not cover any of Lyubeznik's results.  In fact, my best judgment found the seemingly excessive number of exercises and footnotes which follow the most effective way to present such a breadth of material, without too many tangents.
+
+\bigskip
+\centerline{\bf Basic Local Cohomology}   
+\bigskip
+
+In this section the symbol $I$ will denote an ideal of a Noetherian\footnote{A ring $R$ is {\bf Noetherian} means all of its ideals are \fg.  Equivalently, the ideals in $R$ satisfy the {\bf ascending chain condtion} (ACC), that every strictly ascending chain of ideals must terminate, and this is equivalent to the condition that every nonempty collection of ideals in $R$ has a maximal element.  For a proof of the equivalence of these conditions, see Chapter 1 of \cite{Eis}, who also shows these statements are equivalent to Hilbert's original definition.  A polynomial ring over a field is an example of a Noetherian ring.} ring $R$ and $M$ will denote an $R$-module, which may or may not be Noetherian
+\footnote{An $R$-module $M$ is {\bf Noetherian} means all of its submodules are \fg.  For reasons analogous to the case of a ring, this is equivalent to $M$ satisfying ACC on its submodules, which is equivalent to every nonempty collection of submodules having a maximal element.\newline
+{\bf Proposition.} {\it If $R$ is a Noetherian ring and $M$ is a \fg\ $R$-module, then $M$ is Noetherian.} \newline
+{\it Proof.} See \cite{Eis} p. 28. $\square$}.
+Recall\footnote{Luis Nu\~nez-Betancourt and Linquan Ma each defined local cohomology for $M$ with support in $I$ in seminar talks prior to this one.  A good source is \cite{Iyen}; local cohomology is finally defined in Chapter 7.  However, the chapters leading up to it provide an excellent explanation of the difficult concepts needed to even define it.} one way to define local cohomology is to take a direct limit\footnote{For a construction of direct limits and inverse limits, see \cite{Hoch} p. 150-153.} of $\Ext$ modules\footnote{$\Ext$ is called the {\bf extension functor}.  Appendix 3 of \cite{Eis} gives the construction of this homological algebra tool, as well as the construction of the $\Tor$ functor.  For a much more general introduction to $\gkd$-functors see Chapter 2 of \cite{Weib}.}:
+$$H^i_I(M)=\dirlim_t\,\Ext^i_R(R/I^t,M).$$
+The 0th local cohomology module has the identification
+$$\aligned H^0_I\,M=\,& \dirlim_t\Hom_R(R/I^t,M) \\
+\iso\,& \bigcup_t\Ann_M(I^t) 
+\endaligned$$
+\flushpar where $\Ann_MI^t$ is the annihilator of $I^t$ in $M$.  So another way we can define local cohomology is to use the right derived functors of $\Gamma_I(?)=\bigcup_t\Ann_?I^t$.  Explicitly, create an exact sequence of $R$-modules
+$$0\to M\to N_1\to N_2\to\cdots$$
+where the $N_i$ satisfy the following property: for every ideal $J\subset R$, every homomorphsim $J\to N_i$ is actually the restriction of a homomorphism defined on all of $R$.\footnote{Such a module is called {\bf injective}.  The exact sequence $0\to M\to N_1\to N_2\to\cdots$ is called an {\bf injective resolution of $M$}.  See Appendix 3.4 of \cite{Eis} for a more detailed explanation of injective resolutions.}  Omit $M$ and apply the functor $\Gamma_I(?)$ to each term of the sequence.  The cohomology of the resulting sequence will be the same as the local cohomology defined above.  Both of these definitions involve directed systems with ideals $I^t$, and this observation makes it clear why local cohomology is the same up to radicals of $I$. 
+
+Suppose $f_1\seq f_n\in R$ and $\rad\,I=\rad\((f_1\seq f_n)R\)$.  A third way to compute local cohomology is to use the direct limit of the Kozsul complexes 
+$$\Cal K^i(f_1^t\seq f_n^t;M).$$
+Section 7 of \cite{HW11} describes the construction explicitly while Chapter 17 of \cite{Eis} defines more general Koszul complexes and their properties beyond the scope of our context\footnote{The Koszul complex we care about will be a \u Cech complex.}.  We first need the notion of the tensor product of complexes.  For $K\coh$ and $L\coh$ complexes of $R$-modules with respective differentials $d_K$ and $d_L$, let $M\coh=K\coh\tns_RL\coh$ denote the complex
+\part 1 $M^h=\bigoplus_{i+j=h}K^i\tns_RL^j$ with
+\part 2 differential 
+$$d^h(a\tns b)=d_Ka\tns b+(-1)^ia\tns d_Lb,$$ 
+where $a\in K^i$, $b\in L^j$, and $i+j=h$.  
+
+\demo{\bf\Exe} $M\coh$ is a complex of $R$-modules. \enddemo
+
+\flushpar For $N$ complexes $K_{(1)}\coh\seq K_{(N)}\coh$ define the tensor product recursively as
+$$K_{(1)}\coh\tns_R\cdots\tns_RK_{(N)}\coh=\(K_{(1)}\coh\tns_R\cdots\tns_RK_{(N-1)}\coh\)\tns_RK_{(N)}\coh.$$
+
+Now for $f\in R$, define the {\bf Koszul complex}
+$$\Cal K\coh(f;R)=\(0\to R\to R\to 0\),$$
+where the middle map is multiplication by $f$.  Then for $f_1\seq f_n\in R$, define the Koszul complex
+$$\Cal K\coh\(f_1\seq f_n;M\)=\(\bigotimes_{i=1}^n\Cal K\coh(f_i;R)\)\tns_RM,$$
+meaning, tensor $M$ with each term of the complex $\Cal K\coh(f_1\seq f_n;R)=\bigotimes_{i=1}^n\Cal K\coh(f_i;R)$.  
+
+\demo{\Not} When the context is clear, writing $\un{f}$ in place of $f_1\seq f_n$ is easier and quicker, as in $\Cal K\coh(\un{f};M)$.  Let 
+$$\aligned 
+\Cal K\coh(\un{f}\8;M)=\,& \dirlim_t\,\Cal K\coh(\un{f}^t;M) \\
+ =\,& \dirlim_t\,\Cal K\coh(f_1^t\seq f_n^t;M).
+\endaligned$$
+Let $H\coh(\un{f}\8;M)$ denote its cohomology. \enddemo
+
+\proclaim{\Thm} Suppose $\rad\,I=\rad\((f_1\seq f_n)R\)$.  Then
+$$H^j_I\,M\iso H\coh(\un{f}\8;M)$$
+canonically as functors of $M$. \endproclaim
+\pf See \cite{HW11}. \qed
+
+An immediate consequence is that local cohomology $H^i_I\,M$ vanishes when $i$ exceeds the number of generators for any ideal with the same radical as $I$.  There are other, slightly less obvious consequences which follow from the various definitions of local cohomology:
+
+\demo{\bf\Exe} A short exact sequence of $R$-modules
+$$0\to M'\to M\to M''\to 0$$
+induces a long exact sequence
+$$\multlinegap{50pt}\multline
+0\to H^0_I\,M'\to H^0_I\,M\to H^0_I\,M''\to H^1_I\,M'\to\cdots \\
+\to H^i_I\,M'\to H^i_I\,M\to H^i_I\,M''\to H^{i+1}_I\,M'\to\cdots. 
+\endmultline$$
+\enddemo
+
+\demo{\bf\Exe} If $R\to S$ is a ring homomorphism, $IS$ denotes the ideal generated by the image of $I$ in $S$, and $M$ is an $S$-module (hence an $R$-module), then $H^i_I\,M=H^i_{IS}\,M$. \enddemo
+
+\demo{\bf\Exe} Localization at a maximal ideal does not change local cohomology. \enddemo
+
+%%%%%
+
+\bigskip
+\centerline{\bf The Ring of Differential Operators}
+\bigskip
+
+Hochster's treatment of $D$-modules in \cite{HD} is a light survey of the results in the theory and omits many technical details.  His main source is Jan-Erik Bj\"ork's book {\it Rings of Differential Operators}.  The intent of this talk is to keep the material approachable to a Michigan graduate student who has passed the Qualifying Review (i.e., a second or third year student).
+
+The ring we care about will be $D=D(R,K)$, constructed as follows.  Let $K$ be a field of characteristic 0 and let $R$ denote the formal power series ring $K\[[x_1\seq x_n]\]$ in $n$ variables over $K$.  The ring of differential operators $D(R,K)$ consists of the $K$-vector space endomorphisms of $R$ generated by multiplication of elements in $R$ and the usual differential operators $\gkd_1,\seq\gkd_n$ defined formally\footnote{When differential operators $\gkd_i$ are defined formally it means for $f\in R$, $\gkd_if=\frac{\partial f}{\partial x_i}$ where the partials $\frac{\partial}{\partial x_i}$ are not really limits as in the usual definition of a derivative.  Rather, they are simply defined by the power rule for differentiation.  This is why we need to be in characteristic 0.  A ring of differential operators does exist when $K$ is characteristic $p>0$, but its construction is more complicated.}.  For the rest of this talk, $D,\,R,$ and $K$ are defined as above.\footnote{$D$ is sometimes called the {\bf Weyl algebra}, though the usual definition uses a polynomial ring $R$ instead of a formal power series ring.} 
+
+\demo{\bf\Exe} The $\gkd_i$ commute with eachother. \enddemo
+ 
+\demo{\bf\Exe} Thinking of the $x_j$ as operators on $R$, meaning for $f\in R$, $x_j(f)$ is just the product $x_j\cdot f$, if $i\neq j$ then $\gkd_ix_j-x_j\gkd_i=0$. \enddemo
+
+\demo{\bf\Exe} Again, thinking of the $x_i$ as operators on $R$, $\gkd_ix_i-x_i\gkd_i=1$. \enddemo  
+
+\demo{\bf\Exe} More generally, for any $f\in R$, thought of as an operator on $R$,
+$$\gkd_if-f\gkd_i=\frac{\partial f}{\partial x_i}.$$
+\enddemo
+
+\demo{\bf\Exe} $D$ is $R$-free on the monomials in the $\gkd_i$, both as a left and as a right $R$-module. \enddemo
+
+%%%%%
+
+\bigskip
+\centerline{\bf Holonomic $D$-Modules}
+\bigskip
+
+Say $A$ is an associative (not necessarily commutative) ring with 1, and has an {\bf ascending filtration}
+$$\Sigma=\(\Sigma_0\inc\Sigma_1\inc\Sigma_2\inc\cdots\),$$
+meaning the following conditions hold:
+\part 1 each $\Sigma_i$ is an additive subgroup, 
+\part 2 $1\in\Sigma_0$, 
+\part 3 $\bigcup_i\Sigma_i=A$, and 
+\part 4 $\Sigma_i\Sigma_j\inc\Sigma_{i+j}$ for all $i,\,j$. 
+\flushpar Furthermore, we insist the filtration is such that the {\bf associated graded ring}
+$$\gr(A)=\Sigma_0\oplus\Sigma_1/\Sigma_0\oplus\cdots\oplus\Sigma_i/\Sigma_{i-1}\oplus\cdots$$
+is commutative and Noetherian.  Such a ring $A$ is called a {\bf filtered ring}. 
+
+\demo{\bf\Exe} The filtration on $A$ actually does give $\gr\,A$ a ring structure. \enddemo
+
+$D$ as defined above has a filtration $\Sigma$ in which $\Sigma_i$ consists of all $R$-linear combinations of monomials in degree at most $i$ in the $\gkd_j$. 
+
+\demo{\bf\Exe} The associated graded ring $\gr\,D$ is isomorphic to a polynomial ring $R[\gkz_1\seq\gkz_n]$ in $n$ variables over $R$, where $\gkz_i$ is the image of $\gkd_i$ in $\Sigma_1/\Sigma_0$.  In particular, $\gr\,D$ is commutative, Noetherian, and regular\footnote{A local ring with maximal ideal $m$ is {\bf regular} means $m$ can be generated by exactly $d$ elements, where $d$ is the Krull dimension of the ring.  (The {\bf Krull dimension} of a ring $R$ is the supremum of the lengths of chains of prime ideals in $R$; the {\bf Krull dimension} of an $R$-module $M$ is the Krull dimension of the ring $R/\Ann\,M$.)  More generally, a ring $R$ is {\bf regular} means all of its localizations at maximal ideals are regular.}.  Its Krull dimension is $2n$. \enddemo
+
+A \fg\ (left) $A$-module $M$ has a {\bf good} filtration 
+$$\Gamma=\(\Gamma_0\inc\Gamma_1\inc\Gamma_2\inc\cdots\)$$ 
+means it satisfies the following:
+\part 1 $\{\Gamma_i\}$ are abelian subgroups,  
+\part 2 $\bigcup_i\Gamma_i=M$, 
+\part 3 $\Sigma_i\Gamma_j\inc\Gamma_{i+j}$ for all $i,j\in\N$ 
+\flushpar (so far these are just the conditions that make it a filtration), and the {\bf associated graded module}
+$$\gr_{\Gamma}(M)=\bigoplus_{i=1}^{\infty}\Gamma_i/\Gamma_{i-1}$$
+is \fg\ over $\gr\,A$ (this last condition is the condition for the filtration to be good).  
+
+Bj\"ork proved the following:
+
+\proclaim{\Prop} $A$ as described above is both left and right Noetherian\footnote{When $A$ is not necessarily commutative the Noetherian condition may hold for left or right ideals.}.  Moreover, an $A$-module $M$ has a good filtration \iff\ it is \fg\ as an $A$-module and for $\{\Gamma_i\}$ and $\{\Gamma_i'\}$ filtrations on $M$ there exists an integer $c$ with $$\Gamma_i\inc\Gamma_{i+c}'\text{ and }\Gamma_i'\inc\Gamma_{i+c}$$
+for all $i$. $\square$ \endproclaim
+
+\proclaim{\Cor} By the above proposition, the Krull dimension of $\gr_{\Gamma}M$ is independent of the choice of good filtration $\Gamma$. \endproclaim
+\pf See p. 5 of \cite{HD}, where Hochster cites Bj\"ork. \qed
+
+From the above discussion, $A=D=D(R,K)$ is a filtered ring.  The \fg\ $D$-modules whose associated graded modules have Krull dimension $n$, together with the 0 module, constitute the {\bf (left) Bernstein class}\footnote{To define the more general notion for a filtered ring $A$ requires understanding of weak global dimension.}.  There is a similar notion for the {\bf right Bernstein class} and in fact, a duality between these two categories holds.
+
+\proclaim{\Thm\footnote{A more general statement is true for any filtered ring $A$.}} The modules in the Bernstein class have finite length as $D$-modules, i.e., each \nz\ module in the Bernstein class has a finite filtration by simple $D$-modules (each of which is again in the Bernstein class). \endproclaim  
+\pf See p. 7 of \cite{HD}. \qed
+
+\demo{\it\Not} The $D$-modules in the Bernstein class are called {\bf holonomic}. 
+
+\proclaim{\Prop} 
+\part 1 Submodules and quotients of holonomic $D$-modules are also holonomic.
+\part 2 For a short exact sequence of $D$-modules
+$$0\to M_1\to M_2\to M_3\to 0$$
+$M_2$ is a holonomic $D$-module \iff\ both $M_1$ and $M_3$ are. \endproclaim
+\pf See p. 6 of \cite{HD}. \qed
+
+\demo{\bf\Exe} $R$ is a holonomic $D$-module. \enddemo
+
+\demo{\bf\Exe} If $W$ is any multiplicative system in $D$ and $M$ is a $D$-module, then $W\1M$ has the structure of a $D$-module in such a way that the map $M\to W\1M$ is a homomorphism of $D$-modules. \enddemo
+ 
+%%%%%
+
+\bigskip
+\centerline{\bf Applications to Local Cohomology}
+\bigskip
+
+\proclaim{\Thm\ (Bj\"ork)} With $D=D(R,K)$ as defined above, if $M$ is a holonomic $D$-module and $f\in R$, then the localization $M_f$ is a holonomic $D$-module. $\square$ \endproclaim
+
+\flushpar This difficult result leads to many applications to local cohomology theory.
+
+\proclaim{\Cor} The local cohomology modules $H^i_ I\,M$ all have the structure of $D$-modules in such a way that if $M$ is holonomic, then so are $H^i_I\,M$. \endproclaim
+\pf Write $I=(f_1\seq f_s)R$. We can use the Kozsul complex $\Cal K\coh(\un f\8;M)$ to compute $H^i_ IM$.  This is 
+$$0\to M\to\bigoplus_iM_{f_i}\to\bigoplus_{i<j}M_{f_if_j}\to\cdots\to M_{f_1\cdots f_s}\to 0$$
+where the maps are alternating sums of the natural localization maps.  Thus by an above exercise the Koszul complex is a complex of $D$-modules.  In particular, the local cohomology modules are $D$-modules.  
+
+If $M$ is holonomic then the theorem says so are the $M_{f_i}$.  To see direct sums of holonomic $D$-modules are holonomic, consider the split exact sequence
+$$0\to M_1\to M_1\oplus M_2\to M_2\to 0$$
+where $M_1$ and $M_2$ are holonomic.  Another exercise from above shows the middle term $M_1\oplus M_2$ is holonomic as well.  Then for more than two summands use induction to show holonomicity.  Finally, one of the above exercises shows the kernels, which are submodules, and the cohomology modules, which are quotients, must be holonomic as well.  In particular, $H^i_I\,M$ must be holonomic if $M$ is. \qed
+
+For any ring $S$ and $S$-module $N$, a prime ideal $P\subset S$ is {\bf associated} to $N$ means $P$ annihilates (kills) an element of $N$.  The set of all primes associated to $N$ is denoted $\Ass_S(N)$ and is sometimes called the {\bf assassinator} of $N$.
+
+\demo{\bf\Exe} If $S$ is Noetherian then $\Ass_SN$ is nonempty. \enddemo
+
+\proclaim{\Cor} If $M$ is a simple\footnote{A module is {\bf simple} means it has no nontrivial submodule.} $D$-module then the assassinator of $M$ as an $R$-module contains a unique element $P$ (note by construction any $D$-module is also an $R$-module).  Hence, if $M$ is a holonomic $D$-module then $\Ass_RM$ is finite. \endproclaim
+\pf Suppose $M$ is simple.  First of all, $R$ is Noetherian implies $M$ has an associated prime, $P$.  Then $$H^0_PM\iso\bigcup_t\Ann_MP^t$$ 
+is a \nz\ submodule of $M$, hence is equal to $M$.  If $Q$ is another associated prime then 
+$$H^0_QM=M=H^0_PM.$$
+Local cohomology modules with support in different ideals are the same as long as those ideals have the same radical.  But $P$ and $Q$ are prime and so they are already radical.  Therefore, $P$ and $Q$ are the same ideal.
+
+When $M$ is holonomic it has a finite filtration by simple modules.  Therefore if $P$ annihilates an element of $M$, it annihilates an element in one of those simple modules and $P$ is the unique associated prime for that simple module.  So $M$ can only have finitely many associated primes. \qed 
+
+By induction, if $I_1\seq I_s$ is a sequence of ideals of $R$, $i_1\seq i_s$ is a sequence of integers, and $M$ is a holonomic $D$-module, then the iterated local cohomology module
+$$H^{i_s}_{I_s}\(H^{i_{s-1}}_{I_{s-1}}\(\cdots H^{i_1}_{I_1}\, M\cdots\)\)$$
+is a holonomic $D$-module.  In particular, $H^{i_s}_{I_s}\(H^{i_{s-1}}_{I_{s-1}}\(\cdots H^{i_1}_{I_1}\, R\cdots\)\)$ is holonomic and so has a finite assassinator. 
+
+\proclaim{\Prop} Let $m=(x_1\seq x_n)R$ denote the homogeneous maximal ideal\footnote{{\bf Homogeneous} means every element in $m$ has the same degree in the indeterminates $x_i$.} in $R$.  Then $D/Dm\iso H^n_mR$ as a $D$-module.\footnote{$H^n_mR$ is also the unique smallest injective $R$-module containing $R/m$, called the {\bf injective hull} of $R/m$ in $R$.} \endproclaim
+\pf Let $S$ denote the polynomial ring $K[x_1\seq x_n]$ and let $Q=(x_1\seq x_n)S$.  Exercises from earlier give
+$$\aligned
+H^n_m(R)\iso\, & H^n_{QS_Q}(S_Q) \\
+ \iso\, & H^n_Q(S).
+\endaligned$$  
+So we can instead show $D/Dm\iso H^n_QS$.  
+
+The Koszul complex $\Cal K\coh(\un x\8; S)$ gives
+$$H^n_Q(S)\iso\Coker\(\bigoplus_{i=1}^nS_{x_1\cdots\hat{x_i}\cdots x_n}\to S_{x_1\cdots x_n}\)$$
+where the hat means that indeterminant is omitted.  It turns out $H^n_QS$ is the $K$-span of the monomials $x_1^{j_1}\cdots x_n^{j_n}$ where $j_i$ are strictly negative.  From an earlier exercise $D$ is $R$-free as a right $R$-module on the monomials in $\gkd_1\seq\gkd_n$; therefore $D/Dm$ is $K$-free on the span of the images of the monomials in the $\gkd_i$.  
+
+There is a $D$-linear map $D\to H^n_QS$ that sends $1\mapsto x_1\1\cdots x_n\1$.  This map must kill (annihilate) $m$ and hence also kills the left ideal $Dm$, inducing a $D$-linear map $D/Dm\to H^n_QS$.  For this map the image in $H^n_QS$ of the element represented by $\gkd_1^{i_1}\cdots\gkd_n^{i_n}$ is represented by
+$$\frac{\partial^{i_1}}{\partial x_1^{i_1}}\cdots\frac{\partial^{i_n}}{\partial x_n^{i_n}}(x_1\1\cdots x_n\1)=(-1)^{i_1\plsdts i_n}\prod_{j=1}^n i_j!x_j^{-(i_j+1)}.$$
+This means the induced $D$-linear map carries a $K$-vector space basis to a $K$-vector space basis, so is a $D$-isomorphism. \qed
+
+The final results first require some structure theory for injective modules\footnote{See \cite{HW11}.}.  Let $S$ be a commutative, associative ring with 1.    
+
+\flushpar A homomorphism of $S$-modules $h:N\to M$ is an {\bf essential extension} means it is injective and the following equivalent conditions hold:
+\part i Every \nz\ submodule of $M$ has a \nz\ intersection with $h(N)$.
+\part{ii} Every \nz\ element of $M$ has a \nz\ multiple in $h(N)$.
+\part{iii} If $\gkf:M\to Q$ is a homomorphism such that $\gkf\circ h$ is injective then $\gkf$ is injective.
+\flushpar Suppose $S$ is also Noetherian and local with maximal ideal $\frak m$, and suppose $M$ is an $S$-module such that every element of $M$ is killed by a power of $\frak m$.  The {\bf socle} in $M$ is defined as 
+$$\Soc(M)=\Ann_{M}\frak m.$$
+In this special case where every element of $M$ is killed by a power of $\frak m$, $\Soc\,M$ is the largest submodule of $M$ which may be viewed as a vector space over $S/\frak m$; any larger submodule would contain an element not killed by $\frak m$, so could not be a vector space over $S/\frak m$.  Furthermore, the inclusion $\Soc\,M\inc M$ is an essential extension.  To see this, choose $x\in M$ \nz\ and let $t$ denote the largest integer such that $\frak m^tx\neq (0)$.  Then we can choose $y\in\frak m^t$ such that $yx\neq 0$.  The inclusion
+$$\frak my\inc\frak m\frak m^tx=0$$
+implies $y\in\Soc\,M$ and hence the \nz\ multiple $yx\in\Soc\,M$. 
+
+\demo{\bf\Exe} In general, if $N\inc M$ is an essential extension then $\Soc\,M\inc N$. \enddemo
+
+Here is the result on $D$-modules:
+
+\proclaim{\Prop} With $m$ as before, the homogeneous maximal ideal of $R=K[[x_1\seq x_n]]$, if $M$ is any $D$-module (no finiteness conditions on $M$ this time) such that every element is killed by a power of $m$, then $M$ is isomorphic with a direct sum of copies of $D/Dm$.  When $M$ is holonomic the direct sum is finite. \endproclaim
+\pf By the discussion above $M$ is an essential extension of a $K$-vector space $V\inc M$, and we may choose a $K$-vector space basis $\{v_{\gkl}\}_{\gkl\in\Lambda}$ for $V$.  (The use of $\Lambda$ to denote the indexing set indicates the basis may be infinite.)  Consider a free $D$-module $G$ with free generators $\{u_{\gkl}\}$, also indexed by $\Lambda$.  Each copy of $D$ in $G$ is both a left and right module over $D$, so $G$ is both a left and right module over $D$. Therefore $G$ is both a left an a right module over $R$.  This will matter later in the proof when we are considering $G/Gm$ as an $R$-module.  
+
+Define the $D$-linear map $G\to M$ by $u_{\gkl}\mapsto v_{\gkl}$ for each $\gkl\in\Lambda$.  This induces a map $G/Gm\to M$ which sends the images of the $u_{\gkl}$ to the corresponding elements in the basis $v_{\gkl}$ for $V$.  The goal is to show this induced map is the isomorphism we want.
+
+Because $G$ was chosen as a direct sum of copies of $D$ indexed by $\Lambda$, $G/Gm$ may be identified with a direct sum of copies of $D/Dm$ indexed by $\Lambda$. Thus, $G/Gm$ is an essential extension of a $K$-vector space, $\Soc(G/Gm)$.  The basis on $\Soc(G/Gm)$ is induced by the images of the $u_{\gkl}$ in $G/Gm$, so is indexed by $\Lambda$.  Each of these basis elements maps to its correspondingly indexed basis element $v_{\gkl}$ in $V$.  That bijection between vector space bases shows $\Soc(G/Gm)$ is mapped isomorphically onto $V$.  
+
+As an isomorphism, in particular, the map $G/Gm\to M$ is injective on $\Soc(G/Gm)$.  Suppose a \nz\ element in $G/Gm$ maps to zero.  Then because $\Soc(G/Gm)\inc G/Gm$ is an essential extension, a \nz\ multiple of that element in $\Soc(G/Gm)$ is mapped to zero, contradicting injectivity.  So $G/Gm\to M$ must also be injective.  In fact, the map splits as a map of $R$-modules:  If $I$ is an ideal in $R$ and $\gkf:I\to G/Gm$ an $R$-linear map, then $\phi$ must kill $m$.  So we can actually think of $\gkf$ as a map $I/Rm\to G/Gm$.  Since $m$ is a maximal ideal, $I/Rm$ must be either zero or the unit ideal.  In either case though, $\phi$ will extend to a map from $R$.  From this we can conclude $G/Gm$ is an injective $R$-module, therefore its injection into $M$ splits.\footnote{The splitting of an injective map is a general property of injective modules.}  
+
+Write $M\iso G/Gm\oplus M_0$ as the $R$-module splitting.  As a submodule of $M$, every element of $M_0$ is killed by a power of $m$ (that was a hypothesis on $M$).  Therefore if $M_0\neq 0$, its socle is \nz.  The socle of $M_0$ is contained in the socle of $M$, which is contained in $V$.  But $V$ is contained in the image of $G/Gm$, which only meets $M_0$ at zero, by construction.  Therefore $M_0=0$ and we have 
+$$\aligned M\iso\,& G/Gm\oplus 0 \\
+\iso\,& G/Gm,
+\endaligned$$
+as required. \qed
+
+\demo{\Not} To save writing space, let the symbol $T$ denote an iteration of local cohomology functors. \enddemo
+
+\proclaim{\Cor} Let $T$ be a composition of local cohomology functors as described just above. If $T(R)$ has the property that every element is killed by a power of $m$, then $T(R)$ is isomorphic as a $D$-module to a finite direct sum of copies of $D/Dm$, and so is injective. \endproclaim
+\pf $T(R)$ is a holonomic $D$-module by a result above.  Then the desired result follows from the last two propositions about $D$-modules.  \qed 
+
+For more results, again, see Mel Hochster's notes.
+
+%%%%%
+\bigskip
+\centerline{\bf APPENDIX:  SOLUTIONS TO EXERCISES} \hfill
+\bigskip
+
+\demo{\bf\Exe}{\bf $M\coh$ is a complex of $R$-modules.} \enddemo
+\demo{\it\Sol} We constructed $M\coh$ so that its terms are $R$-modules and its differentials are $R$-linear.  We just need to check that the compositions $M^{h-1}\to M^h\to M^{h+1}$ are all zero.  Say $a_i\in K^i$ and $b_j\in L^j$, for all $i,\,j$.  Apply $d^{h-1}$ to a typical element in $M^{h-1}$:
+$$\aligned
+d^{h-1}\(\bigoplus_{i+j=h-1}a_i\tns b_j\)=\,& \bigoplus_{i+j=h-1}d^{h-1}\(a_i\tns b_j\) \\
+=\,& \bigoplus_{i+j=h-1}\(d_ka_i\tns b_j+(-1)^ia_i\tns d_Lb_j\)
+\endaligned$$
+The resulting terms are in $M^h$.  Now apply $d^h$:
+$$\aligned
+&d^h\(\bigoplus_{i+j=h-1}\(d_ka_i\tns b_j+(-1)^ia_i\tns d_Lb_j\)\) \\
+&= \bigoplus_{i+j=h-1}d^h\(d_ka_i\tns b_j+(-1)^ia_i\tns d_Lb_j\) \\
+&= \bigoplus_{i+j=h-1}\(d^h\(d_Ka_i\tns b_j\)+d^h\((-1)^ia_i\tns d_Lb_j\)\) \\
+&= \bigoplus_{i+j=h-1}\(\(d_K\circ d_Ka_i\tns b_j+(-1)^{i+1}d_Ka_i\tns d_Lb_j\)\right.+ \\
+&\qquad\quad\left.\(d_K(-1)^ia_i\tns d_Lb_j+(-1)^ia_i\tns d_L\circ d_Lb_j\)\) \\
+&= \bigoplus_{i+j=h-1}\(0+(-1)^{i+1}d_Ka_i\tns d_Lb_j+(-1)^id_Ka_i\tns d_Lb_j+0\) \\
+&= 0.
+\endaligned$$
+We applied the composition to an arbitrary element and got zero, so the composition map itself must be zero. \qed
+
+\demo{\bf\Exe}{\bf A short exact sequence of $R$-modules
+$$0\to M'\to M\to M''\to 0$$
+induces a long exact sequence
+$$\multlinegap{50pt}\multline
+0\to H^0_I\,M'\to H^0_I\,M\to H^0_I\,M''\to H^1_I\,M'\to\cdots \\
+\to H^i_I\,M'\to H^i_I\,M\to H^i_I\,M''\to H^{i+1}_I\,M'\to\cdots. 
+\endmultline$$}
+\enddemo
+\demo{\it\Sol} $\Ext$ is a right derived functor, hence a universal cohomological $\gkd$-functor.  Thus, by definition\footnote{Though very formal, \cite{Weib} has the best justification for these statements.}, induces the long exact sequence
+$$\multlinegap{25pt}\multline
+0\to\Hom_R(R/I^t,M')\to\Hom_R(R/I^t,M)\to\Hom_R(R/I^t,M'')\to \\
+\Ext^1_R(R/I^t,M')\to\Ext^1_R(R/I^t,M)\to\Ext^1_R(R/I^t,M'')\to\cdots\to \\
+\Ext^i_R(R/I^t,M')\to\Ext^i_R(R/I^t,M)\to\Ext^i_R(R/I^t,M'')\to\cdots.
+\endmultline$$
+To actually get local cohomology though, we have to take the direct limit.  But the direct limit is a filtered colimit\footnote{See \cite{Weib}.  This exercise also appears as a ``Discussion" in \cite{HW11}.}, so is exact.  In other words, applying $\dirlim_t$ to each term of the above long exact sequence produces precisely the desired long exact sequence on local cohomology. \qed 
+
+\demo{\bf\Exe}{\bf If $R\to S$ is a ring homomorphism, $IS$ denotes the ideal generated by the image of $I$ in $S$, and $M$ is an $S$-module (hence an $R$-module), then $H^i_I\,M=H^i_{IS}\,M$.} \enddemo
+\demo{\it\Sol} $M$ is an $R$-module by restriction of scalars\footnote{See Chapter 2 of \cite{AtyM}.}, i.e., multiplication of $M$ by $f\in R$ is identical to multiplication by the image of $f$ in $S$.  Let $f_1\seq f_n$ denote the generators of $I$ and $g_1\seq g_n$ the respective generators of $IS$.  Both Koszul complexes $\Cal K\coh(\un f\8;M)$ and $\Cal K\coh(\un g\8;M)$ consist of localization maps and the remark above gives an identification of $M_{f_i}$ with $M_{g_i}$.  Therefore the Koszul complexes and hence, the cohomology, are the same. \qed
+
+\demo{\bf\Exe}{\bf Localization at a maximal ideal does not change local cohomology.} \enddemo
+\demo{\it\Sol} Localization at a maximal ideal is a ring homomorphism, so this is a special case of the previous exercise. \qed
+
+\medskip
+\centerline{\bf -----} \hfill
+\medskip
+
+\demo{\bf\Exe}{\bf The $\gkd_i$ commute with eachother.} \enddemo
+\demo{\it\Sol} Choose an arbitrary element $f\in R$ and do the computation:
+$$\aligned
+(\gkd_i\gkd_j-\gkd_j\gkd_i)(f)=\,& \gkd_i\gkd_j(f)-\gkd_j\gkd_i(f) \\
+=\,& \gkd_i\(\frac{\partial}{\partial x_j}f\)-\gkd_j\(\frac{\partial}{\partial x_i}f\) \\
+=\,& \frac{\partial}{\partial x_i}\frac{\partial}{\partial x_j}f-\frac{\partial}{\partial x_j}\frac{\partial}{\partial x_i}f \\
+=\,& \frac{\partial^2}{\partial x_i\partial x_j}f-\frac{\partial^2}{\partial x_j\partial x_i}f \\
+=\,& 0,
+\endaligned$$
+as desired. \qed
+ 
+\demo{\bf\Exe}{\bf Thinking of the $x_j$ as operators on $R$, meaning for $f\in R$, $x_j(f)$ is just the product $x_j\cdot f$, if $i\neq j$ then $\gkd_ix_j-x_j\gkd_i=0$.} \enddemo
+\demo{\it\Sol} As in the previous exercise, choose an arbitrary element $f\in R$ and do the computation:
+$$\aligned
+(\gkd_ix_j-x_j\gkd_i)(f)=\,& \gkd_ix_j(f)-x_j\gkd_i(f) \\
+=\,& \frac{\partial}{\partial x_i}(x_jf)-x_j\(\frac{\partial}{\partial x_i}f\) \\
+=\,& \(0\cdot f+x_j\(\frac{\partial}{\partial x_i}f\)\)-x_j\(\frac{\partial}{\partial x_i}f\) \\
+=\,& 0,
+\endaligned$$
+as desired.
+\qed
+
+\demo{\bf\Exe}{\bf Again, thinking of the $x_i$ as operators on $R$, $\gkd_ix_i-x_i\gkd_i=1$.} \enddemo  
+\demo{\it\Sol} Applying the left hand side to arbitrary $f\in R$, we want the result to be $f$.
+$$\aligned
+(\gkd_ix_i-x_i\gkd_i)(f)=\,& \gkd_ix_i(f)-x_i\gkd_i(f) \\
+=\,& \frac{\partial}{\partial x_i}(x_if)-x_i\(\frac{\partial}{\partial x_i}f\) \\
+=\,& \(1\cdot f+x_i\(\frac{\partial}{\partial x_i}f\)\)-x_i\(\frac{\partial}{\partial x_i}f\) \\
+=\,& f,
+\endaligned$$
+so  $\gkd_ix_i-x_i\gkd_i$ is in fact the identity operator. \qed
+
+\demo{\bf\Exe}{\bf More generally, for any $f\in R$, thought of as an operator on $R$,
+$$\gkd_if-f\gkd_i=\frac{\partial f}{\partial x_i}.$$}
+\enddemo
+\demo{\it\Sol} This time $f$ is thought of as an operator, so take $g\in R$:
+$$\aligned
+(\gkd_if-f\gkd_i)(g)=\,& \gkd_if(g)-f\gkd_i(g) \\
+=\,& \frac{\partial}{\partial x_i}(fg)-f\(\frac{\partial}{\partial x_i}g\) \\
+=\,& \(\(\frac{\partial}{\partial x_i}f\)g+f\(\frac{\partial}{\partial x_i}g\)\)-f\(\frac{\partial}{\partial x_i}g\) \\
+=\,& \(\frac{\partial}{\partial x_i}f\)g \\
+=\,& \(\frac{\partial f}{\partial x_i}\)(g),
+\endaligned$$
+the desired result. \qed
+
+\demo{\bf\Exe}{\bf $D$ is $R$-free on the monomials in the $\gkd_i$, both as a left and as a right $R$-module.} \enddemo
+\demo{\it\Sol} The previous few exercises give a way to write an element of $D$ (that has an expression that is not a sum of two or more elements in $D$) as an element of $R$ multiplied on the right by a monomial in the $\gkd_i$: as shown above, the $\gkd_i$ commute with eachother; $R$ is already commutative so we only need a way to write $\gkd_jf$, for $f\in R$, as an expression consisting of an element of $R$ multiplied on the right by a monomial in the $\gkd_i$.  The last exercise gives
+$$\gkd_if=f\gkd_i+\frac{\partial f}{\partial x_i}.$$
+The commutativity of elements in $R$ with eachother and of the $\gkd_i$ with eachother implies such an expression is unique.  So $D$ is $R$-free on the monomials in the $\gkd_i$, as a left $R$-module.
+
+Likewise, for $f\in R$ we have $f\gkd_i=\gkd_if-\frac{\partial f}{\partial x_i}$ by the previous exercise.  This fact, along with the commutativity of elements in $R$ with eachother and of the $\gkd_i$ with eachother gives every element of $D$ (which has an expression not a sum of two or more elements in $D$) a unique expression as an element of $R$ multiplied on the left by a monomial in the $\gkd_i$.  Thus $D$ is also $R$-free on the monomials in the $\gkd_i$, as a right $R$-module. \qed
+
+\medskip
+\centerline{\bf -----} \hfill
+\medskip
+
+\demo{\bf\Exe}{\bf The filtration on $A$ actually does give $\gr\,A$ a ring structure.} \enddemo
+\demo{\it\Sol} We just have to check the ring axioms for $\gr\,A$.  Define addition and multiplication in $\gr\,A$ as the respective induced operations from $A$.  Any two elements in $A$ lie in $\Sigma_i$, for some $i$, and so upon taking quotients, $\gr\,A$ is still a commutative group under addition.  Similarly, the property $\Sigma_i\Sigma_j\inc\Sigma_{i+j}$ ensures any two elements can be multiplied within one of the subgroups in the filtration $\Sigma$, and so associativity is also preserved upon taking quotients.  Since $1\in\Sigma_0$, it remains the unit element in $\gr\,A$.  Finally, since both ring operations can be done in one common subgroup $\Sigma_i$, the distributive laws remain intact upon taking quotients. \qed
+
+\demo{\bf\Exe}{\bf The associated graded ring $\gr\,D$ is isomorphic to a polynomial ring $R[\gkz_1\seq\gkz_n]$ in $n$ variables over $R$, where $\gkz_i$ is the image of $\gkd_i$ in $\Sigma_1/\Sigma_0$.  In particular, $\gr\,D$ is commutative, Noetherian, and regular.  Its Krull dimension is $2n$.} \enddemo
+\demo{\it\Sol} For each $i\geq 1$, elements of $\Sigma_i/\Sigma_{i-1}$ are in bijection with the $R$-linear combinations of monomials in degree exactly $i$ in the $\gkd_j$.  In particular, $\Sigma_1/\Sigma_0$ is generated over $R$ by the images of the $\gkd_i$.  The suggested map 
+$$\gkd_i+\Sigma_0\mapsto\gkz_i$$
+is automatically $R$-linear, so addition and multiplication agree with the respective operations in $R$. 
+
+Commutativity between elements of $R$ and the variables will follow by induction.  The base case is straightforward: for $f\in R$, $\gkd_if-f\gkd_i=\frac{\partial f}{\partial x_i}\in\Sigma_0$, so vanishes in the quotient.  To simplify notation in the inductive case, for any $d\in D$, let $\bar{d}^{(j)}$ denote the image of $d$ in $\Sigma_j/\Sigma_{j-1}$.  So in the base case, for example, $\bar{\gkd_i}^{(1)}f-f\bar{\gkd_i}^{(1)}=\bar{\(\frac{\partial f}{\partial x_i}\)}^{(1)}=0$.  Now say $d\in D$ has the expression
+$$d=f\prod_{i=1}^n\gkd_i^{j_i}$$
+where $f\in R$ and $j_1\plsdts j_n=j$.  Assume commutativity holds for elements in $\Sigma_j/\Sigma_{j-1}$.  Then
+$$\aligned 
+\bar{\gkd_l}^{(1)}\bar d^{(j)}-\bar d^{(j)}\bar{\gkd_l}^{(1)}=\,&  \bar{\gkd_l}^{(1)}\bar{\(f\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}-\bar{\(f\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}\bar{\gkd_l}^{(1)} \\
+=\,& \bar{\gkd_l}^{(1)}\bar f^{(0)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}-\bar f^{(0)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}\bar{\gkd_l}^{(1)} \\
+=\,& \bar f^{(0)}\bar{\gkd_l}^{(1)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}-\bar f^{(0)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)}^{(j)}\bar{\gkd_l}^{(1)} \\
+=\,& \bar f^{(0)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)\gkd_l}^{(j+1)}-\bar f^{(0)}\bar{\(\prod_{i=1}^n\gkd_i^{j_i}\)\gkd_l}^{(j+1)} \\
+=\,& 0.
+\endaligned$$
+Verifying the commutativity of the ring $\gr\,D$ ensures the map to $R[\gkz_1\seq\gkz_n]$ preserves ring operations.  Furthermore, the bijection between $\bar{\gkd_i}^{(1)}$ and $\gkz_i$ ensures the map is a ring isomorphism.
+
+The additional statements (commutative, Noetherian, regular, Krull dimension $2n$) are already true for $R[\gkz_1\seq\gkz_n]$ and do not change under ring isomorphism, hence are true for $\gr\,D$. \qed
+
+\medskip
+\centerline{\bf -----} \hfill
+\medskip
+
+\demo{\bf\Exe}{\bf $R$ is a holonomic $D$-module.} \enddemo
+\demo{\it\Sol} First of all, $R$ is finitely generated as a $D$-module: define the $D$-map 
+$$\aligned
+D&\to R \\
+d&\mapsto d(1)
+\endaligned$$
+for each $d\in D$.  Then $R\iso D/\Ann_D(1)$, so only needs one generator.
+
+We have to check the Krull dimension of $\gr_{\Gamma}R$, assuming a good filtration $\Gamma$ exists.   Define $\Gamma=\{\Gamma_i\}$ by $\Gamma_i=\Sigma_iR$, where $\Sigma_iR$ is again the subgroup of all $R$-linear combinations of monomials in degree at most $i$ in the $\gkd_i$.  Then $\Sigma_iR=R$ for all $i$ and hence $\Gamma$ satisfies all the conditions to be a filtration.  The associated graded module is then
+$$\aligned
+\gr_{\Gamma}R&= \bigoplus_i\Gamma_i/\Gamma_{i-1} \\
+&= R/0\oplus R/R\oplus\cdots\oplus R/R\oplus\cdots \\
+&= R
+\endaligned$$
+where by convention $\Gamma_{i}=0$ for all $i<0$.  Recall the associated graded ring for $D$ is a polynomial ring in $n$ variables over $R$, so $R$ is again generated by one element over $D$.  The Krull dimension of $R$ is $n$ because $R=K[[x_1\seq x_n]]$.  Therefore $R$ is a holonomic $D$-module. \qed
+
+\demo{\bf\Exe}{\bf If $W$ is any multiplicative system in $R$ and $M$ is a $D$-module, then $W\1M$ has the structure of a $D$-module in such a way that the map $M\to W\1M$ is a homomorphism of $D$-modules.} \enddemo
+\pf First extend the action of $D$ to an element $\frac{m}{w}\in W\1M$, where $m\in M$ and $w\in W$.  Elements in $R$ already act as usual, by multiplication, since $w\in R$.  For $i=1\seq n$,
+$$\gkd_i\(\frac{m}{w}\)=\frac{w\cdot\gkd_im-m\cdot\frac{\partial}{\partial x_i}w}{w^2}\in W\1M.$$
+The $D$-linearity is carried over from $D$-linearity over $M$ and the linearity of multiplication and partial derivatives.  The natural map $M\to W\1 M$ given by $m\mapsto m/1$ is already $R$-linear.  To get $D$-linearity, take $i=1\seq n$ and
+$$\aligned
+\gkd_im\mapsto\frac{\gkd_im}{1}&= \gkd_i\(\frac{m}{1}\) \\
+&= \frac{1\cdot\gkd_im-m\cdot\frac{\partial}{\partial x_i}1}{1^2} \\
+&= \frac{\gkd_im}{1},
+\endaligned$$
+as it should. \qed
+
+\medskip
+\centerline{\bf -----} \hfill
+\medskip
+
+\demo{\bf\Exe}{\bf If $S$ is Noetherian then $\Ass_SN$ is nonempty.} \enddemo
+\pf Choose a \nz\ element $u\in N$.  The following set
+$$\Cal A=\{\Ann\,ru\st r\in S,\,ru\neq 0\}$$
+is a family of ideals in $S$.  $\Cal A$ is nonempty because it contains the zero ideal.  All the ideals in $\Cal A$ are proper, because if $S$ kills $u$ then so must $1$, meaning $u=0$, a contradiction to the choice of $u$.
+
+$S$ is Noetherian, so $\Cal A$ must have a maximal element, $I=\Ann\,ru$, for some $r\in S$.  By construction $ru\neq 0$ so we can just rechoose $u$ so that maximal ideal in $\Cal A$ will be $I=\Ann\,u$.  Showing $I$ is prime will show $\Ass_SN$ is nonempty.  
+
+Suppose $a,b\notin I$ and $ab\in I$.  Since $b$ is not in $I$, $bu\neq 0$.  On the other hand, $I\cdot bu=0$, because $a(bu)=0$.  Therefore $I+Sa$ kills $u$, so is also in $\Cal A$.  But $I\inc I+Sa\neq S$ was chosen to be maximal, so $a$ must also be in $I$.
+\qed
+
+\demo{\bf\Exe}{\bf In general, if $N\inc M$ is an essential extension then $\Soc\,M\inc N$.} \enddemo
+\pf It is enough to show any \nz\ element in $\Soc\,M$ lies in $N$, because zero already does.  So choose \nz\ $u\in\Soc\,M$.  By definition, the maximal ideal $\frak m\in S$ kills $u$, but $S$ does not by the selection of $u$.  So
+$$\aligned 
+Su&\iso S/\Ann\,u \\
+&\iso S/\frak m,
+\endaligned$$  
+a field.  On the other hand, $N\inc M$ is an essential extension, so in particular, $u$ lies in a \nz\ submodule contained in $N$.  But $u$ generates $S/\frak m$, the smallest \nz\ $S$-module, and so $S/\frak m\inc N$.  In particular, $u\in N$.
+\qed
+
+\bigskip
+\bigskip
+%%% Bibliography %%%
+\Refs\nofrills{Bibliography}
+\widestnumber\key{SwMn}
+
+\ref\key AtyM
+\manyby M.F. Atiyah and I.G. MacDonald
+\book Introduction to Commutative Algebra
+\bookinfo Advanced Book Program
+\publ Westview Press, A Member of the Perseus Books Group
+\publaddr Boulder, Colorado
+\yr 1969
+\endref 
+
+%\ref\key DuFo
+%\manyby David S. Dummit and Richard M. Foote
+%\book Abstract Algebra
+%\bookinfo Third Edition
+%\publ John Wiley and Sons, Inc.
+%\publaddr Hoboken, NJ
+%\yr 2004
+%\endref
+
+\ref\key Eis
+\by David Eisenbud
+\book Commutative Algebra with a View Toward Algebraic Geometry
+\bookinfo Graduate Texts in Mathematics {\bf 150} 
+\publ Springer Science+Business Media, Inc.
+\publaddr New York, NY
+\yr 2004
+\endref
+
+%\ref\key Hart
+%\by Robin Hartshorne
+%\book Algebraic Geometry
+%\bookinfo Graduate Texts in Mathematics {\bf 52} 
+%\publ Springer Science+Business Media, LLC
+%\publaddr New York, NY
+%\yr 2006
+%\endref
+
+\ref\key HD
+\by Mel Hochster
+\book $D$-modules and Lyubeznik's Finiteness Theorems for Local Cohomology
+\bookinfo Notes, see \url{http://www.math.lsa.umich.edu/~hochster/615W11/dmod.pdf}
+\publ Unpublished
+\yr 2011
+\endref
+
+\ref\key Hoch
+\by Mel Hochster
+\book Math 614 Lecture Notes, Fall, 2010 
+\bookinfo Course Notes, see \url{http://www.math.lsa.umich.edu/~hochster/614F10/614.html}
+\publ Unpublished
+\yr 2010
+\endref
+
+\ref\key HW11
+\by Mel Hochster
+\book Local Cohomology
+\bookinfo Course Notes, see \url{http://www.math.lsa.umich.edu/~hochster/615W11/loc.pdf}
+\publ Unpublished
+\yr 2011
+\endref
+
+\ref\key Iyen
+\manyby Srikanth B. Iyengar, Graham J. Leuschke, Anton Leykin, Claudia Miller, Ezra Miller, Anurag K. Singh, Uli Walther 
+\book Twenty-Four Hours of Local Cohomology
+\bookinfo Graduate Studies in Mathamatics, Volume 87
+\publ American Mathematical Society 
+\publaddr Providence, RI
+\yr 2007
+\endref
+
+\ref\key Weib
+\by Charles A. Weibel
+\book An introduction to homological algebra
+\bookinfo Cambridge studies in advanced mathematics, 38
+\publ Cambridge University Press
+\publaddr Cambridge, United Kingdom
+\yr 1994
+\endref
+
+%\ref\key Sm
+%\by Karen Smith
+%\book Math 631: Intro to Algebraic Geometry; Fall 2008 Problem Sets
+%\bookinfo see \url{http://www.math.lsa.umich.edu/~kesmith/2008-631hmwk.html}
+%\publ Unpublished
+%\yr 2008
+%\endref
+
+%%% online template %%%
+%\Refs : : : \endRefs list of references
+%\refstyle#1 specify style A, B, or C
+%A = initials, B = name, C = number
+%\ref : : : \endref individual reference
+%\no or \key number or key for reference
+%\widestnumber\no#1 or \widestnumber\key#1
+%\by author
+%\bysame same as previous author
+%\paper name of paper
+%\vol volume
+%\yr year of publication
+%\jour journal
+%\page or \pages page(s)
+%\toappear to appear
+%\inbook article in a book
+%\moreref additional reference information
+%\paperinfo extra information after paper title
+%\procinfo information about proceedings
+%\issue issue number
+%\lang language
+%\transl information about translated version
+%\book book
+%\ed or \eds editor(s)
+%\publ publisher
+%\publaddr publisher address
+%\bookinfo extra information after book title
+%\finalinfo extra information for end
+%\miscnote same as \finalinfo, in parens.
+
+\endRefs
+
+\bye
