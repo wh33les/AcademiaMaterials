@@ -1,4 +1,4 @@
-# AcademiaMaterials
+# Academia materials
 
 Showcase of things I have used code to make throughout my academic career.  
 
