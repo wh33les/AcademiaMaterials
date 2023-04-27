@@ -1,0 +1,546 @@
+\beamer@endinputifotherversion {3.36pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\slideentry {0}{0}{3}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {1}{\S 1}{4}{Basic definitions}{0}}
+\headcommand {\beamer@sectionpages {1}{3}}
+\headcommand {\beamer@subsectionpages {1}{3}}
+\headcommand {\slideentry {1}{0}{1}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{5}{Sets and functions}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {1}{1}{1}{5/5}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{1}{2}{6/6}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{1}{3}{7/7}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {1}{1}{4}{8/8}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{1}{5}{9/9}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{1}{6}{10/10}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {1}{1}{7}{11/11}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {1}{1}{8}{12/12}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {1}{1}{9}{13/13}{Sets and functions}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{14}{Binary operations}}\headcommand {\beamer@subsectionpages {5}{13}}
+\headcommand {\slideentry {1}{2}{1}{14/14}{Binary operations}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {1}{2}{2}{15/15}{Binary operations}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {1}{2}{3}{16/16}{Binary operations}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {1}{2}{4}{17/17}{Binary operations}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{18}{Definition of a group}}\headcommand {\beamer@subsectionpages {14}{17}}
+\headcommand {\slideentry {1}{3}{1}{18/18}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {1}{3}{2}{19/19}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {1}{3}{3}{20/20}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {1}{3}{4}{21/21}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {1}{3}{5}{22/22}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {1}{3}{6}{23/23}{Definition of a group}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{24}{Dihedral groups}}\headcommand {\beamer@subsectionpages {18}{23}}
+\headcommand {\slideentry {1}{4}{1}{24/24}{Dihedral groups}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {1}{4}{2}{25/25}{Dihedral groups}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {1}{4}{3}{26/26}{Dihedral groups}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {1}{4}{4}{27/27}{Dihedral groups}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{1}{5}{28}{Permutation groups}}\headcommand {\beamer@subsectionpages {24}{27}}
+\headcommand {\slideentry {1}{5}{1}{28/28}{Permutation groups}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {1}{5}{2}{29/29}{Permutation groups}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {1}{5}{3}{30/30}{Permutation groups}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {1}{5}{4}{31/31}{Permutation groups}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {1}{5}{5}{32/32}{Permutation groups}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{1}{6}{33}{Monoids}}\headcommand {\beamer@subsectionpages {28}{32}}
+\headcommand {\slideentry {1}{6}{1}{33/33}{Monoids}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {1}{6}{2}{34/34}{Monoids}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {1}{6}{3}{35/35}{Monoids}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {1}{6}{4}{36/36}{Monoids}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {1}{6}{5}{37/37}{Monoids}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsectionentry {0}{1}{7}{38}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {33}{37}}
+\headcommand {\slideentry {1}{7}{1}{38/38}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {1}{7}{2}{39/39}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {1}{7}{3}{40/40}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {1}{7}{4}{41/41}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {1}{7}{5}{42/42}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {1}{7}{6}{43/43}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {1}{7}{7}{44/44}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {1}{7}{8}{45/45}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {1}{7}{9}{46/46}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {1}{7}{10}{47/47}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {1}{7}{11}{48/48}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {1}{7}{12}{49/49}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {1}{7}{13}{50/50}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {1}{7}{14}{51/51}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {1}{7}{15}{52/52}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {1}{7}{16}{53/53}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {1}{7}{17}{54/54}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\slideentry {1}{7}{18}{55/55}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\sectionentry {2}{\S 2}{56}{Basic properties of groups}{0}}
+\headcommand {\beamer@sectionpages {1}{55}}
+\headcommand {\beamer@subsectionpages {1}{55}}
+\headcommand {\slideentry {2}{0}{1}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{57}{Identities and inverses}}\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\slideentry {2}{1}{1}{57/57}{Identities and inverses}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\slideentry {2}{1}{2}{58/58}{Identities and inverses}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\slideentry {2}{1}{3}{59/59}{Identities and inverses}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\slideentry {2}{1}{4}{60/60}{Identities and inverses}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {2}{1}{5}{61/61}{Identities and inverses}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{62}{Integer exponents}}\headcommand {\beamer@subsectionpages {57}{61}}
+\headcommand {\slideentry {2}{2}{1}{62/62}{Integer exponents}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {2}{2}{2}{63/63}{Integer exponents}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {2}{2}{3}{64/64}{Integer exponents}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {2}{2}{4}{65/65}{Integer exponents}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {2}{2}{5}{66/66}{Integer exponents}{0}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{67}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {62}{66}}
+\headcommand {\slideentry {2}{3}{1}{67/67}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {2}{3}{2}{68/68}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\slideentry {2}{3}{3}{69/69}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\slideentry {2}{3}{4}{70/70}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {70}{70}}
+\headcommand {\slideentry {2}{3}{5}{71/71}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\slideentry {2}{3}{6}{72/72}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\slideentry {2}{3}{7}{73/73}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\slideentry {2}{3}{8}{74/74}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\sectionentry {3}{\S 3}{75}{Subgroups}{0}}
+\headcommand {\beamer@sectionpages {1}{74}}
+\headcommand {\beamer@subsectionpages {1}{74}}
+\headcommand {\slideentry {3}{0}{1}{75/75}{}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{76}{Definition}}\headcommand {\beamer@subsectionpages {75}{75}}
+\headcommand {\slideentry {3}{1}{1}{76/76}{Definition}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {3}{1}{2}{77/77}{Definition}{0}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\slideentry {3}{1}{3}{78/78}{Definition}{0}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\slideentry {3}{1}{4}{79/79}{Definition}{0}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\slideentry {3}{1}{5}{80/80}{Definition}{0}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\slideentry {3}{1}{6}{81/81}{Definition}{0}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\slideentry {3}{1}{7}{82/82}{Definition}{0}}
+\headcommand {\beamer@framepages {82}{82}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{83}{Cyclic subgroups}}\headcommand {\beamer@subsectionpages {76}{82}}
+\headcommand {\slideentry {3}{2}{1}{83/83}{Cyclic subgroups}{0}}
+\headcommand {\beamer@framepages {83}{83}}
+\headcommand {\slideentry {3}{2}{2}{84/84}{Cyclic subgroups}{0}}
+\headcommand {\beamer@framepages {84}{84}}
+\headcommand {\slideentry {3}{2}{3}{85/85}{Cyclic subgroups}{0}}
+\headcommand {\beamer@framepages {85}{85}}
+\headcommand {\slideentry {3}{2}{4}{86/86}{Cyclic subgroups}{0}}
+\headcommand {\beamer@framepages {86}{86}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{87}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {83}{86}}
+\headcommand {\slideentry {3}{3}{1}{87/87}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {87}{87}}
+\headcommand {\slideentry {3}{3}{2}{88/88}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {88}{88}}
+\headcommand {\sectionentry {4}{\S 4}{89}{Orders of groups and elements}{0}}
+\headcommand {\beamer@sectionpages {1}{88}}
+\headcommand {\beamer@subsectionpages {1}{88}}
+\headcommand {\slideentry {4}{0}{1}{89/89}{}{0}}
+\headcommand {\beamer@framepages {89}{89}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{90}{Order of an element}}\headcommand {\beamer@subsectionpages {89}{89}}
+\headcommand {\slideentry {4}{1}{1}{90/90}{Order of an element}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\slideentry {4}{1}{2}{91/91}{Order of an element}{0}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{92}{Order of a group}}\headcommand {\beamer@subsectionpages {90}{91}}
+\headcommand {\slideentry {4}{2}{1}{92/92}{Order of a group}{0}}
+\headcommand {\beamer@framepages {92}{92}}
+\headcommand {\slideentry {4}{2}{2}{93/93}{Order of a group}{0}}
+\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{94}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {92}{93}}
+\headcommand {\slideentry {4}{3}{1}{94/94}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\slideentry {4}{3}{2}{95/95}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\slideentry {4}{3}{3}{96/96}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\slideentry {4}{3}{4}{97/97}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\sectionentry {5}{\S 5}{98}{Cyclic groups}{0}}
+\headcommand {\beamer@sectionpages {1}{97}}
+\headcommand {\beamer@subsectionpages {1}{97}}
+\headcommand {\slideentry {5}{0}{1}{98/98}{}{0}}
+\headcommand {\beamer@framepages {98}{98}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{99}{Definition}}\headcommand {\beamer@subsectionpages {98}{98}}
+\headcommand {\slideentry {5}{1}{1}{99/99}{Definition}{0}}
+\headcommand {\beamer@framepages {99}{99}}
+\headcommand {\slideentry {5}{1}{2}{100/100}{Definition}{0}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{101}{Finite cyclic groups}}\headcommand {\beamer@subsectionpages {99}{100}}
+\headcommand {\slideentry {5}{2}{1}{101/101}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\slideentry {5}{2}{2}{102/102}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {102}{102}}
+\headcommand {\slideentry {5}{2}{3}{103/103}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {103}{103}}
+\headcommand {\slideentry {5}{2}{4}{104/104}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\slideentry {5}{2}{5}{105/105}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\slideentry {5}{2}{6}{106/106}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\slideentry {5}{2}{7}{107/107}{Finite cyclic groups}{0}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{108}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {101}{107}}
+\headcommand {\slideentry {5}{3}{1}{108/108}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\slideentry {5}{3}{2}{109/109}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {109}{109}}
+\headcommand {\slideentry {5}{3}{3}{110/110}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {110}{110}}
+\headcommand {\sectionentry {6}{\S 6}{111}{Group homomorphisms}{0}}
+\headcommand {\beamer@sectionpages {1}{110}}
+\headcommand {\beamer@subsectionpages {1}{110}}
+\headcommand {\slideentry {6}{0}{1}{111/111}{}{0}}
+\headcommand {\beamer@framepages {111}{111}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{112}{Definition}}\headcommand {\beamer@subsectionpages {111}{111}}
+\headcommand {\slideentry {6}{1}{1}{112/112}{Definition}{0}}
+\headcommand {\beamer@framepages {112}{112}}
+\headcommand {\slideentry {6}{1}{2}{113/113}{Definition}{0}}
+\headcommand {\beamer@framepages {113}{113}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{114}{Isomorphisms}}\headcommand {\beamer@subsectionpages {112}{113}}
+\headcommand {\slideentry {6}{2}{1}{114/114}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {114}{114}}
+\headcommand {\slideentry {6}{2}{2}{115/115}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\slideentry {6}{2}{3}{116/116}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {116}{116}}
+\headcommand {\slideentry {6}{2}{4}{117/117}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {117}{117}}
+\headcommand {\slideentry {6}{2}{5}{118/118}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {118}{118}}
+\headcommand {\slideentry {6}{2}{6}{119/119}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {119}{119}}
+\headcommand {\slideentry {6}{2}{7}{120/120}{Isomorphisms}{0}}
+\headcommand {\beamer@framepages {120}{120}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{121}{Kernels and images}}\headcommand {\beamer@subsectionpages {114}{120}}
+\headcommand {\slideentry {6}{3}{1}{121/121}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {121}{121}}
+\headcommand {\slideentry {6}{3}{2}{122/122}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {122}{122}}
+\headcommand {\slideentry {6}{3}{3}{123/123}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {123}{123}}
+\headcommand {\slideentry {6}{3}{4}{124/124}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {124}{124}}
+\headcommand {\slideentry {6}{3}{5}{125/125}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {125}{125}}
+\headcommand {\slideentry {6}{3}{6}{126/126}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {126}{126}}
+\headcommand {\slideentry {6}{3}{7}{127/127}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {127}{127}}
+\headcommand {\slideentry {6}{3}{8}{128/128}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {128}{128}}
+\headcommand {\slideentry {6}{3}{9}{129/129}{Kernels and images}{0}}
+\headcommand {\beamer@framepages {129}{129}}
+\headcommand {\beamer@subsectionentry {0}{6}{4}{130}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {121}{129}}
+\headcommand {\slideentry {6}{4}{1}{130/130}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {130}{130}}
+\headcommand {\slideentry {6}{4}{2}{131/131}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {131}{131}}
+\headcommand {\slideentry {6}{4}{3}{132/132}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {132}{132}}
+\headcommand {\slideentry {6}{4}{4}{133/133}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {133}{133}}
+\headcommand {\slideentry {6}{4}{5}{134/134}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {134}{134}}
+\headcommand {\slideentry {6}{4}{6}{135/135}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {135}{135}}
+\headcommand {\sectionentry {7}{\S 7}{136}{Quotient groups}{0}}
+\headcommand {\beamer@sectionpages {1}{135}}
+\headcommand {\beamer@subsectionpages {1}{135}}
+\headcommand {\slideentry {7}{0}{1}{136/136}{}{0}}
+\headcommand {\beamer@framepages {136}{136}}
+\headcommand {\beamer@subsectionentry {0}{7}{1}{137}{Cosets}}\headcommand {\beamer@subsectionpages {136}{136}}
+\headcommand {\slideentry {7}{1}{1}{137/137}{Cosets}{0}}
+\headcommand {\beamer@framepages {137}{137}}
+\headcommand {\slideentry {7}{1}{2}{138/138}{Cosets}{0}}
+\headcommand {\beamer@framepages {138}{138}}
+\headcommand {\slideentry {7}{1}{3}{139/139}{Cosets}{0}}
+\headcommand {\beamer@framepages {139}{139}}
+\headcommand {\slideentry {7}{1}{4}{140/140}{Cosets}{0}}
+\headcommand {\beamer@framepages {140}{140}}
+\headcommand {\slideentry {7}{1}{5}{141/141}{Cosets}{0}}
+\headcommand {\beamer@framepages {141}{141}}
+\headcommand {\slideentry {7}{1}{6}{142/142}{Cosets}{0}}
+\headcommand {\beamer@framepages {142}{142}}
+\headcommand {\slideentry {7}{1}{7}{143/143}{Cosets}{0}}
+\headcommand {\beamer@framepages {143}{143}}
+\headcommand {\slideentry {7}{1}{8}{144/144}{Cosets}{0}}
+\headcommand {\beamer@framepages {144}{144}}
+\headcommand {\slideentry {7}{1}{9}{145/145}{Cosets}{0}}
+\headcommand {\beamer@framepages {145}{145}}
+\headcommand {\slideentry {7}{1}{10}{146/146}{Cosets}{0}}
+\headcommand {\beamer@framepages {146}{146}}
+\headcommand {\beamer@subsectionentry {0}{7}{2}{147}{Quotient groups}}\headcommand {\beamer@subsectionpages {137}{146}}
+\headcommand {\slideentry {7}{2}{1}{147/147}{Quotient groups}{0}}
+\headcommand {\beamer@framepages {147}{147}}
+\headcommand {\slideentry {7}{2}{2}{148/148}{Quotient groups}{0}}
+\headcommand {\beamer@framepages {148}{148}}
+\headcommand {\slideentry {7}{2}{3}{149/149}{Quotient groups}{0}}
+\headcommand {\beamer@framepages {149}{149}}
+\headcommand {\slideentry {7}{2}{4}{150/150}{Quotient groups}{0}}
+\headcommand {\beamer@framepages {150}{150}}
+\headcommand {\slideentry {7}{2}{5}{151/151}{Quotient groups}{0}}
+\headcommand {\beamer@framepages {151}{151}}
+\headcommand {\beamer@subsectionentry {0}{7}{3}{152}{Non-obvious isomorphisms}}\headcommand {\beamer@subsectionpages {147}{151}}
+\headcommand {\slideentry {7}{3}{1}{152/152}{Non-obvious isomorphisms}{0}}
+\headcommand {\beamer@framepages {152}{152}}
+\headcommand {\slideentry {7}{3}{2}{153/153}{Non-obvious isomorphisms}{0}}
+\headcommand {\beamer@framepages {153}{153}}
+\headcommand {\slideentry {7}{3}{3}{154/154}{Non-obvious isomorphisms}{0}}
+\headcommand {\beamer@framepages {154}{154}}
+\headcommand {\beamer@subsectionentry {0}{7}{4}{155}{Quotient means kill}}\headcommand {\beamer@subsectionpages {152}{154}}
+\headcommand {\slideentry {7}{4}{1}{155/155}{Quotient means kill}{0}}
+\headcommand {\beamer@framepages {155}{155}}
+\headcommand {\slideentry {7}{4}{2}{156/156}{Quotient means kill}{0}}
+\headcommand {\beamer@framepages {156}{156}}
+\headcommand {\beamer@subsectionentry {0}{7}{5}{157}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {155}{156}}
+\headcommand {\slideentry {7}{5}{1}{157/157}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {157}{157}}
+\headcommand {\slideentry {7}{5}{2}{158/158}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {158}{158}}
+\headcommand {\slideentry {7}{5}{3}{159/159}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {159}{159}}
+\headcommand {\slideentry {7}{5}{4}{160/160}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {160}{160}}
+\headcommand {\slideentry {7}{5}{5}{161/161}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {161}{161}}
+\headcommand {\slideentry {7}{5}{6}{162/162}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {162}{162}}
+\headcommand {\slideentry {7}{5}{7}{163/163}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {163}{163}}
+\headcommand {\slideentry {7}{5}{8}{164/164}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {164}{164}}
+\headcommand {\sectionentry {8}{\S 8}{165}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@sectionpages {1}{164}}
+\headcommand {\beamer@subsectionpages {1}{164}}
+\headcommand {\slideentry {8}{0}{1}{165/165}{}{0}}
+\headcommand {\beamer@framepages {165}{165}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{166}{First Isomorphism Theorem}}\headcommand {\beamer@subsectionpages {165}{165}}
+\headcommand {\slideentry {8}{1}{1}{166/166}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@framepages {166}{166}}
+\headcommand {\slideentry {8}{1}{2}{167/167}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@framepages {167}{167}}
+\headcommand {\slideentry {8}{1}{3}{168/168}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@framepages {168}{168}}
+\headcommand {\slideentry {8}{1}{4}{169/169}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@framepages {169}{169}}
+\headcommand {\slideentry {8}{1}{5}{170/170}{First Isomorphism Theorem}{0}}
+\headcommand {\beamer@framepages {170}{170}}
+\headcommand {\beamer@subsectionentry {0}{8}{2}{171}{Example: Special Linear Group}}\headcommand {\beamer@subsectionpages {166}{170}}
+\headcommand {\slideentry {8}{2}{1}{171/171}{Example: Special Linear Group}{0}}
+\headcommand {\beamer@framepages {171}{171}}
+\headcommand {\slideentry {8}{2}{2}{172/172}{Example: Special Linear Group}{0}}
+\headcommand {\beamer@framepages {172}{172}}
+\headcommand {\slideentry {8}{2}{3}{173/173}{Example: Special Linear Group}{0}}
+\headcommand {\beamer@framepages {173}{173}}
+\headcommand {\beamer@subsectionentry {0}{8}{3}{174}{Finitely generated abelian groups}}\headcommand {\beamer@subsectionpages {171}{173}}
+\headcommand {\slideentry {8}{3}{1}{174/174}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {174}{174}}
+\headcommand {\slideentry {8}{3}{2}{175/175}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {175}{175}}
+\headcommand {\slideentry {8}{3}{3}{176/176}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {176}{176}}
+\headcommand {\slideentry {8}{3}{4}{177/177}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {177}{177}}
+\headcommand {\slideentry {8}{3}{5}{178/178}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {178}{178}}
+\headcommand {\slideentry {8}{3}{6}{179/179}{Finitely generated abelian groups}{0}}
+\headcommand {\beamer@framepages {179}{179}}
+\headcommand {\beamer@subsectionentry {0}{8}{4}{180}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {174}{179}}
+\headcommand {\slideentry {8}{4}{1}{180/180}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {180}{180}}
+\headcommand {\slideentry {8}{4}{2}{181/181}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {181}{181}}
+\headcommand {\sectionentry {9}{\S 9}{182}{Diagonalization of integer matrices}{0}}
+\headcommand {\beamer@sectionpages {1}{181}}
+\headcommand {\beamer@subsectionpages {1}{181}}
+\headcommand {\slideentry {9}{0}{1}{182/182}{}{0}}
+\headcommand {\beamer@framepages {182}{182}}
+\headcommand {\beamer@subsectionentry {0}{9}{1}{183}{Linear algebra}}\headcommand {\beamer@subsectionpages {182}{182}}
+\headcommand {\slideentry {9}{1}{1}{183/183}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {183}{183}}
+\headcommand {\slideentry {9}{1}{2}{184/184}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {184}{184}}
+\headcommand {\slideentry {9}{1}{3}{185/185}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {185}{185}}
+\headcommand {\slideentry {9}{1}{4}{186/186}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {186}{186}}
+\headcommand {\slideentry {9}{1}{5}{187/187}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {187}{187}}
+\headcommand {\slideentry {9}{1}{6}{188/188}{Linear algebra}{0}}
+\headcommand {\beamer@framepages {188}{188}}
+\headcommand {\beamer@subsectionentry {0}{9}{2}{189}{Normalizing}}\headcommand {\beamer@subsectionpages {183}{188}}
+\headcommand {\slideentry {9}{2}{1}{189/189}{Normalizing}{0}}
+\headcommand {\beamer@framepages {189}{189}}
+\headcommand {\slideentry {9}{2}{2}{190/190}{Normalizing}{0}}
+\headcommand {\beamer@framepages {190}{190}}
+\headcommand {\slideentry {9}{2}{3}{191/191}{Normalizing}{0}}
+\headcommand {\beamer@framepages {191}{191}}
+\headcommand {\slideentry {9}{2}{4}{192/192}{Normalizing}{0}}
+\headcommand {\beamer@framepages {192}{192}}
+\headcommand {\slideentry {9}{2}{5}{193/193}{Normalizing}{0}}
+\headcommand {\beamer@framepages {193}{193}}
+\headcommand {\slideentry {9}{2}{6}{194/194}{Normalizing}{0}}
+\headcommand {\beamer@framepages {194}{194}}
+\headcommand {\beamer@subsectionentry {0}{9}{3}{195}{Smith normal form}}\headcommand {\beamer@subsectionpages {189}{194}}
+\headcommand {\slideentry {9}{3}{1}{195/195}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {195}{195}}
+\headcommand {\slideentry {9}{3}{2}{196/196}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {196}{196}}
+\headcommand {\slideentry {9}{3}{3}{197/197}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {197}{197}}
+\headcommand {\slideentry {9}{3}{4}{198/198}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {198}{198}}
+\headcommand {\slideentry {9}{3}{5}{199/199}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {199}{199}}
+\headcommand {\slideentry {9}{3}{6}{200/200}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {200}{200}}
+\headcommand {\slideentry {9}{3}{7}{201/201}{Smith normal form}{0}}
+\headcommand {\beamer@framepages {201}{201}}
+\headcommand {\beamer@subsectionentry {0}{9}{4}{202}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {195}{201}}
+\headcommand {\slideentry {9}{4}{1}{202/202}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {202}{202}}
+\headcommand {\slideentry {9}{4}{2}{203/203}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {203}{203}}
+\headcommand {\slideentry {9}{4}{3}{204/204}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {204}{204}}
+\headcommand {\slideentry {9}{4}{4}{205/205}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {205}{205}}
+\headcommand {\slideentry {9}{4}{5}{206/206}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {206}{206}}
+\headcommand {\sectionentry {10}{\S 10}{207}{Fundamental Theorem of Finitely Generated Abelian Groups}{0}}
+\headcommand {\beamer@sectionpages {1}{206}}
+\headcommand {\beamer@subsectionpages {1}{206}}
+\headcommand {\slideentry {10}{0}{1}{207/207}{}{0}}
+\headcommand {\beamer@framepages {207}{207}}
+\headcommand {\beamer@subsectionentry {0}{10}{1}{208}{Presentation of a group}}\headcommand {\beamer@subsectionpages {207}{207}}
+\headcommand {\slideentry {10}{1}{1}{208/208}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {208}{208}}
+\headcommand {\slideentry {10}{1}{2}{209/209}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {209}{209}}
+\headcommand {\slideentry {10}{1}{3}{210/210}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {210}{210}}
+\headcommand {\slideentry {10}{1}{4}{211/211}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {211}{211}}
+\headcommand {\slideentry {10}{1}{5}{212/212}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {212}{212}}
+\headcommand {\slideentry {10}{1}{6}{213/213}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {213}{213}}
+\headcommand {\slideentry {10}{1}{7}{214/214}{Presentation of a group}{0}}
+\headcommand {\beamer@framepages {214}{214}}
+\headcommand {\beamer@subsectionentry {0}{10}{2}{215}{Row and column operations}}\headcommand {\beamer@subsectionpages {208}{214}}
+\headcommand {\slideentry {10}{2}{1}{215/215}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {215}{215}}
+\headcommand {\slideentry {10}{2}{2}{216/216}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {216}{216}}
+\headcommand {\slideentry {10}{2}{3}{217/217}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {217}{217}}
+\headcommand {\slideentry {10}{2}{4}{218/218}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {218}{218}}
+\headcommand {\slideentry {10}{2}{5}{219/219}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {219}{219}}
+\headcommand {\slideentry {10}{2}{6}{220/220}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {220}{220}}
+\headcommand {\slideentry {10}{2}{7}{221/221}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {221}{221}}
+\headcommand {\slideentry {10}{2}{8}{222/222}{Row and column operations}{0}}
+\headcommand {\beamer@framepages {222}{222}}
+\headcommand {\beamer@subsectionentry {0}{10}{3}{223}{Applications}}\headcommand {\beamer@subsectionpages {215}{222}}
+\headcommand {\slideentry {10}{3}{1}{223/223}{Applications}{0}}
+\headcommand {\beamer@framepages {223}{223}}
+\headcommand {\slideentry {10}{3}{2}{224/224}{Applications}{0}}
+\headcommand {\beamer@framepages {224}{224}}
+\headcommand {\slideentry {10}{3}{3}{225/225}{Applications}{0}}
+\headcommand {\beamer@framepages {225}{225}}
+\headcommand {\slideentry {10}{3}{4}{226/226}{Applications}{0}}
+\headcommand {\beamer@framepages {226}{226}}
+\headcommand {\slideentry {10}{3}{5}{227/227}{Applications}{0}}
+\headcommand {\beamer@framepages {227}{227}}
+\headcommand {\slideentry {10}{3}{6}{228/228}{Applications}{0}}
+\headcommand {\beamer@framepages {228}{228}}
+\headcommand {\slideentry {10}{3}{7}{229/229}{Applications}{0}}
+\headcommand {\beamer@framepages {229}{229}}
+\headcommand {\beamer@subsectionentry {0}{10}{4}{230}{Solutions to exercises}}\headcommand {\beamer@subsectionpages {223}{229}}
+\headcommand {\slideentry {10}{4}{1}{230/230}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {230}{230}}
+\headcommand {\slideentry {10}{4}{2}{231/231}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {231}{231}}
+\headcommand {\slideentry {10}{4}{3}{232/232}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {232}{232}}
+\headcommand {\slideentry {10}{4}{4}{233/233}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {233}{233}}
+\headcommand {\slideentry {10}{4}{5}{234/234}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {234}{234}}
+\headcommand {\slideentry {10}{4}{6}{235/235}{Solutions to exercises}{0}}
+\headcommand {\beamer@framepages {235}{235}}
+\headcommand {\beamer@partpages {1}{235}}
+\headcommand {\beamer@subsectionpages {1}{235}}
+\headcommand {\beamer@sectionpages {1}{235}}
+\headcommand {\beamer@documentpages {235}}
+\headcommand {\def \inserttotalframenumber {235}}

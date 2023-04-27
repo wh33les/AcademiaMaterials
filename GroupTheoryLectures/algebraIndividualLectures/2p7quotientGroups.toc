@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Quotient groups}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Cosets}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Quotient groups}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Non-obvious isomorphisms}{11}{0}{1}

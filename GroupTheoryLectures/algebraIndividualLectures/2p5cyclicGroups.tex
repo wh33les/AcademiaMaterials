@@ -1,0 +1,217 @@
+\documentclass[../algebraNotesMSRI-UP2016.tex]{subfiles}
+
+\begin{document}
+
+\section[\S \thesection]{Cyclic groups}
+% % % % %
+\subsection[\subsecname]{Definition}\label{subsec:cyclicDefs}
+% % %
+\begin{frame}[c]{\subsecname}
+Recall, from Section \ref{subsec:cyclic}, the notion of a cyclic subgroup.
+
+\smallGap
+\begin{dfn}
+A group $G$ is \vocab{cyclic} means there exists $g\in G$ such that $\langle g\rangle=G$.
+\end{dfn}
+
+\smallGap
+\begin{ex}
+Often we say ``infinite cyclic" to describe groups isomorphic to $\Z$ (see Section \ref{subsec:isomorphisms} for the definition of \vocab{isomorphism}).
+\end{ex}
+
+\smallGap
+\begin{que}
+What is the generator for the group $\Z$?
+\end{que}
+\end{frame}
+
+% % %
+\begin{frame}
+\begin{ex}
+$\Z\times\Z$ is not cyclic.  
+
+\smallGap
+\pf
+Assume, to the contrary, that there exist $a,b\in\Z$ such that $\langle(a,b)\rangle=\Z\times\Z$.  Then for any arbitrary element $(x,y)\in\Z\times \Z$ there exists an integer $n$ such that $x=na$ and $y=nb$.  There exists another integer, $m$, such that $(x+1,y)=(ma,mb)$, which implies 
+\begin{align*}
+x+1 =&\ na+1 = ma \\
+y =&\ nb = mb \\
+\implies &\ n = m \\
+\implies x+1 =&\ na+1=na,
+\end{align*}
+which is a contradiction.
+\qed
+\end{ex}
+\end{frame}
+
+% % % % %
+\subsection[\subsecname]{Finite cyclic groups}
+% % %
+\begin{frame}[c]{\subsecname}{}
+We state the \vocab{division algorithm}, as it will prove useful, particularly in Section \ref{subsec:kernelsAndImages}.
+
+\smallGap
+\begin{thm}[Division Algorithm]\label{thm:divisionAlgorithm}
+Suppose $n\in\Z$ and $d\in\N$.  Then there exist unique integers $q$ (the \vocab{quotient}), and $r$ (the \vocab{remainder}) such that 
+\begin{equation}\label{eq:divisionAlgorithm}
+n = q\cdot d+r \quad\text{ and }\quad 0 \leq r < d.
+\end{equation}
+In this context, $d$ is called the \vocab{divisor}.
+\qed
+\end{thm}
+\end{frame}
+
+% % % 
+%\begin{frame}[c]
+%We shall not prove Theorem \ref{thm:divisionAlgorithm} beyond mentioning that it relies on the \vocab{Well-Ordering Principle} (which we also state without proof).  
+%
+%\smallGap
+%\begin{thm}[Well-Ordering Principle]
+%Every non-empty set of positive integers contains a smallest element. 
+%\qed
+%\end{thm}
+%\end{frame}
+
+% % %
+\begin{frame}
+%\begin{que}
+%Given any arbitrary $n\in\N$, does there exist a group of order $n$?
+%\end{que}
+%
+%\smallGap
+\begin{dfn}\label{dfn:ZmodnZ}
+For $n\in\N$, the set of all possible remainders upon division by $n$,
+\[
+\Z_n:=\{0,1,\dots,n-1\},
+\]
+equipped with the binary operation
+\begin{align*}
+\oplus_n:\Z_n\times \Z_n &\to \Z_n \\
+	(a,b) &\mapsto \parbox[t]{0.5\textwidth}{
+		$r$, as in Equation \eqref{eq:divisionAlgorithm}, 
+		\vspace{-0.3pc}
+		\flushright putting $a+b=n$ and $n=d$,}
+\end{align*}
+is called the \vocab{group of integers mod $n$}.
+\end{dfn}
+%\end{frame}
+%
+% % %
+%\begin{frame}[c]{}
+\smallGap
+\begin{que}[cf. Problem 57]
+For fixed $n\in\N$, which elements generate $\Z_n$ (besides 1)?
+\end{que}
+%
+%\smallGap
+%\textbf{Remark on the notation:} In many subbranches of mathematics, particularly Number Theory, the symbol $\Z_p$ is used to denote the \vocab{$p$-adic integers}, where $p$ is always a prime number.    
+%
+%\smallGap
+%For this reason many authors prefer the notation $\Z/n\Z$, and we shall use the two interchangeably.  The alternate notation may seem unintuitive, for one, because it is a longer expression.  In Section \ref{subsec:FGAG} we reveal its origin.   
+\end{frame}
+
+% % %
+\begin{frame}[c]{}{}
+\begin{ex}[cf. Problem 56]
+The following are ``addition tables" for each of the groups $\Z_5$ %$\Z/5\Z$ 
+and $\Z_6$. %$\Z/6\Z$.
+\[
+\begin{array}{c | c c c c c }
+ \Z_5 & 0 & 1 & 2 & 3 & 4 \\
+ \hline
+ 0 & 0 & 1 & 2 & 3 & 4 \\ 
+ 1 & 1 & 2 & 3 & 4 & 0 \\
+ 2 & 2 & 3 & 4 & 0 & 1 \\
+ 3 & 3 & 4 & 0 & 1 & 2 \\
+ 4 & 4 & 0 & 1 & 2 & 3 
+\end{array}
+\hspace{2pc}
+\begin{array}{c | c c c c c c }
+ \Z_6  & 0 & 1 & 2 & 3 & 4 & 5 \\
+ \hline
+ 0 & 0 & 1 & 2 & 3 & 4 & 5 \\ 
+ 1 & 1 & 2 & 3 & 4 & 5 & 0 \\
+ 2 & 2 & 3 & 4 & 5 & 0 & 1 \\
+ 3 & 3 & 4 & 5 & 0 & 1 & 2 \\
+ 4 & 4 & 5 & 0 & 1 & 2 & 3 \\
+ 5 & 5 & 0 & 1 & 2 & 3 & 4
+\end{array}
+\]	
+\end{ex}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{prop}\label{prop:subgroupOfACyclic}
+Every subgroup of a cyclic group is cyclic.
+\qed
+\end{prop}
+%
+%\smallGap
+%\begin{exe}\label{exe:subgroupOfACyclic}
+%Prove Proposition \ref{prop:subgroupOfACyclic}.  \textit{Hint: Your proof should invoke use of both the Division Algorithm and the Well-Ordering Principle.}  
+%\end{exe}
+
+\smallGap
+\begin{cor}
+Every subgroup of $\Z$ is cyclic.
+\qed
+\end{cor}
+\end{frame}
+
+% % %
+\begin{frame}
+\begin{exe}[cf. Problem 58]\label{exe:prob58}
+Find one generator for the subgroup
+\begin{enumerate}[(a)]
+\item $\langle 2,3\rangle< \Z$.
+\item $\langle 4,6\rangle< \Z$.
+\end{enumerate} 
+\end{exe}
+
+\smallGap
+\begin{exe}[cf. Problem 59]\label{exe:prob59}
+Prove every cyclic group is abelian.
+\end{exe}
+%\end{frame}
+%
+% % %
+%\begin{frame}{}{}
+%{\bf REMARKS ABOUT PROPOSITION \ref{prop:subgroupOfACyclic}, CYCLIC GROUPS, AND THE UPCOMING FUNDAMENTAL THEOREM OF FINITELY GENERATED ABELIAN GROUPS}
+%\end{frame}
+%
+% % %
+%\begin{frame}
+
+\smallGap
+\begin{exe}[cf. Problem 60]\label{exe:prob60}
+Use Lagrange's Theorem (Theorem \ref{thm:Lagrange}) to show any group of prime order must be cyclic.
+\end{exe}
+\end{frame}
+
+\begin{comment}
+% % % % %
+\answerKey
+% % %
+\begin{frame}{\subsecname}
+\exeSol{exe:subgroupOfACyclic}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 58)]{exe:prob58}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 59)]{exe:prob59}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 60)]{exe:prob60}
+\end{frame}
+
+\end{comment}
+% % % % % % % % % %
+\end{document}

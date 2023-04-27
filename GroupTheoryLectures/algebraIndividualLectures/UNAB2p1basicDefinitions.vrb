@@ -1,0 +1,10 @@
+\begin{itemize}
+\item[] %\begin{center}
+\includegraphics[scale=0.46]{sageFig1-1pt2}
+%\end{center}
+
+In the third cell (\verb|Out[3]|) we display the addition table for $\mathscr S(\Gamma)$, showing stable addition is a binary operation.  From the table, the identity element is given by the sandpile
+\[
+e:=\{\verb|1:2,2:1|\}=(2,1).
+\]
+\end{itemize}

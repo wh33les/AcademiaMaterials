@@ -1,0 +1,17 @@
+We illustrate the (right) action of each element in $D_4$ on a portrait of Niels Henrik Abel\footnote[\dagger]{by Johan G\o rbitz - originally uploaded to English wikipedia by en:User:Pladask, \url{http://goo.gl/DkGu1P}, Public Domain, \url{https://goo.gl/ugIjzo}
+}:
+
+\smallGap
+\begin{tabular}{ c  c  c  c }
+\includegraphics[scale=0.25]{Niels_Henrik_Abel} &
+\includegraphics[scale=0.25,angle=-90,origin=c]{Niels_Henrik_Abel} &
+\includegraphics[scale=0.25,angle=180,origin=c]{Niels_Henrik_Abel} &
+\includegraphics[scale=0.25,angle=90,origin=c]{Niels_Henrik_Abel} \\
+$e$ & $r$ & $r^2$ & $r^3$ \\
+&&& \\
+\reflectbox{\includegraphics[scale=0.25]{Niels_Henrik_Abel}} &
+\reflectbox{\includegraphics[scale=0.25,angle=-90,origin=c]{Niels_Henrik_Abel}} &
+\reflectbox{\includegraphics[scale=0.25,angle=180,origin=c]{Niels_Henrik_Abel}} &
+\reflectbox{\includegraphics[scale=0.25,angle=90,origin=c]{Niels_Henrik_Abel}} \\
+$s$ & $rs$ & $r^2s$ & $r^3s$
+\end{tabular}

@@ -1,0 +1,381 @@
+\documentclass[../algebraNotesMSRI-UP2016.tex]{subfiles}
+
+\begin{document}
+
+\section[\S \thesection]{Quotient groups}\label{sec:2p7quotientGroups}
+% % % % % 
+\subsection[\subsecname]{Cosets}
+% % %
+\begin{frame}{\subsecname}
+\begin{dfn}
+Let $(G,\star)$ denote a group with subgroup $H< G$ and suppose $g\in G$.  The set
+\[
+g\star H:=\{g\star h\mid h\in H\}
+\]
+is called a \vocab{(left) coset} of $H$ in $G$.  %The set
+%\[
+%H\star g:=\{h\star g\mid h\in H\}
+%\]  
+%is called a \vocab{right coset} of $H$ in $G$.
+\end{dfn}
+
+\smallGap
+When using multiplicative notation we may write $gH=g\star H$; likewise with additive notation we write $g+H=g\star H$.
+
+\smallGap
+\begin{que}
+What is the condition for a coset to be a subgroup?  (In general, a coset is NOT a subgroup!)
+\end{que}
+\end{frame}
+
+% % %
+%\begin{frame}{}{}
+%{\bf EXAMPLE 18}
+%\begin{ex}
+%{\bf EXAMPLES WHERE LEFT AND RIGHT COSETS ARE NOT EQUAL; WHERE THEY ARE EQUAL BUT NOT ALWAYS}
+%\end{ex}
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+% % %
+\begin{frame}
+\begin{dfn}\label{dfn:normal}
+A subgroup $H<G$ is \vocab{normal} in $G$ means $gH=Hg$ for all $g\in G$.  We write $H\norml G$.
+\end{dfn}
+
+\smallGap 
+We may also say a subgroup $H<G$ is normal if and only if $H$ is closed under \vocab{conjugacy}, meaning, $g\1Hg=H$ for all $g\in G$.  Evidently this is equivalent to Definition \ref{dfn:normal}.  The operation 
+\begin{align*}
+g:\{\text{subgroups in $G$}\} &\to \{\text{subgroups in $G$}\} \\
+ H &\mapsto g\1Hg
+\end{align*} 
+for fixed $g\in G$ is called \vocab{conjugation}.  We can also conjugate individual elements $h\in G$, i.e., $g\1hg$.  %{\bf BLAH BLAH MORE AND REFS}
+\end{frame}
+
+% % %
+\begin{frame}
+\begin{ex}\label{ex:trivialNormal}
+For any group $G$, the two \vocab{trivial} subgroups, $\langle 1_G\rangle<G$ and $G<G$, are normal.
+\end{ex}
+
+\smallGap
+\begin{exe}\label{exe:normalKernel}
+Prove the kernel of a group homormorphism is always normal in its source.
+\end{exe}
+
+\smallGap
+\begin{exe}\label{exe:normalSubgroups}
+Prove all subgroups of an abelian group are normal.
+\end{exe}
+
+\smallGap
+Nearly all the groups we consider are abelian.  By default we shall work with left cosets, keeping in mind all statements we make have right coset analogues.  
+\end{frame}
+
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %
+\begin{frame}
+\begin{ex}
+In $\Z_{12}$, the cosets of $H:=\{0,4,8\}=4\Z_{12}$ are:
+\begin{align*}
+H = 0\oplus_{12}H &= 4\oplus_{12}H = 8\oplus_{12}H = \{0,4,8\}, \\
+	 1\oplus_{12}H &= 5\oplus_{12}H = 9\oplus_{12}H = \{1,5,9\},	\\
+	 2\oplus_{12}H &= 6\oplus_{12}H = 10\oplus_{12}H = \{2,6,10\}, \\
+	 3\oplus_{12}H &= 7\oplus_{12}H = 11\oplus_{12}H = \{3,7,11\} 
+\end{align*}
+\end{ex}
+
+\smallGap
+\begin{que}
+What are some observations you can make?
+\end{que}
+\end{frame}
+
+% % %
+\begin{frame}
+We use $G/H$ to denote the collection of distinct cosets of $H$ in $G$, called \vocab{$G$ modulo $H$}.  The cosets of a subgroup \vocab{partition} the group:
+
+\smallGap
+\begin{prop}\label{prop:cosetsPartition}
+Let $G$ denote a group with subgroup $H< G$.
+\begin{enumerate}[(a)]
+\item The union of all (left, respectively, right) cosets of $H$ in $G$ is the entire group $G$.
+\item For any two cosets $g\star H,h\star H\in G/H$, either
+\begin{enumerate}[(i)]
+	\item $g\star H=h\star H$ or
+	\item $g\star H\cap h\star H=\emptyset$.
+\end{enumerate}
+\end{enumerate}
+\qed
+\end{prop}
+%{\bf PROOF}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{exe}[cf. Problem 66]\label{exe:prob66}
+Let $G=\Z_{30}$ and put $H=5G$.  Using Proposition \ref{prop:cosetsPartition}, list the elements of $G/H$.  
+\end{exe}
+
+\smallGap
+\begin{exe}[cf. Problem 67]\label{exe:prob67}
+Let $G=\Z_2\times \Z_4$ and let $H=(1,1)G< G$.  List the elements of $H$, then list the cosets of $H$.
+\end{exe}
+\end{frame}
+
+% % %
+\begin{frame}
+The following proposition gives a way to prove two cosets are equal.
+
+\smallGap
+\begin{prop}\label{prop:equalCosets}
+Suppose $(G,\star)$ is a group with subgroup $H< G$ and suppose $g,h\in G$.  Then:
+\begin{enumerate}[(a)]
+\item $g\star H=H$ if and only if $g\in H$
+\item $g\star H=h\star H$ if and only if $g\1h\in H$.
+\item $g\star H=h\star H$ if and only if $h\in g\star H$.
+\end{enumerate}
+\end{prop}
+
+\smallGap
+\begin{exe}[cf. Problem 68]\label{exe:prob68}
+Prove Proposition \ref{prop:equalCosets}.  \textit{Hint: Prove (a) first, then use it to prove (b), then use (b) to prove (c).}
+\end{exe}
+\end{frame}
+
+% % % % %
+\subsection[\subsecname]{Quotient groups}
+% % %
+\begin{frame}{\subsecname}
+Let $G=(G,\star)$ denote an abelian group with subgroup $H< G$.  The notation used thusfar suggest a group structure on $G/H$ with a binary operation $\star_{/H}$ well-defined ``up to", or \emph{modulo} elements in $H$.  The natural choice is to define
+\begin{gather}\label{eq:quotientOperation}
+\begin{split}
+\star_{/H}: G/H\times G/H &\to G/H \\
+(g\star H,h\star H) &\mapsto (g\star h)\star H.
+\end{split}
+\end{gather} 
+
+\smallGap
+Given $g_1,g_2,h_1,h_2\in G$, we must verify 
+\begin{align*}
+(g_1\star H,h_1\star H) &=(g_2\star H,h_2\star H) \\
+\implies (g_1\star H)\star_{/H}(h_1\star H) &=(g_2\star H)\star_{/H}(h_2\star H) \\
+\implies (g_1\star h_1)\star H &= (g_2\star h_2)\star H.
+\end{align*}
+\end{frame}
+
+% % %
+\begin{frame}
+Component-wise, we have, by hypothesis,% {\bf VOCAB},
+\[
+g_1\star H=g_2\star H\quad\text{ and }\quad h_1\star H=h_2\star H.
+\]
+Along with associativity,
+\begin{align*}
+(g_1\star h_1)\star H = g_1\star(h_1\star H) \\
+	= g_1\star(h_2\star H) &= g_1\star(H\star h_2) %\tag{\alert{!!!}}
+	\\
+	&= (g_1\star H)\star h_2 \\
+	&= (g_2\star H)\star h_2 \\
+	&= g_2\star (H\star h_2) = g_2\star (h_2\star H) %\tag{\alert{!!!}}
+	\\
+	&\phantom{= g_2\star (H\star h_2)} \;=(g_2\star h_2)\star H.
+\end{align*}
+%provided the lines tagged with (\alert{!!!}) are correct.
+%\begin{que}
+%What additional hypothesis do we need?
+%\end{que}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{thm}\label{thm:quotientGroup}
+Let $G=(G,\star)$ denote an abelian group with subgroup $H< G$.  The set $G/H$ is a group, called the \vocab{quotient group} of $G$ by $H$, equipped with the operation $\star_{/H}$ definined in Equation \eqref{eq:quotientOperation}.
+\qed
+\end{thm}
+
+%\smallGap
+%\begin{exe}\label{exe:quotientGroup}
+%Prove Theorem \ref{thm:quotientGroup}.
+%\end{exe}
+%
+%\smallGap
+%The alternate notation $\Z/n\Z$ to $\Z_n$ arises exactly because it is a quotient group.  A more rigorous statement is given in Section \ref{sec:2p8firstIsomorphismTheorem}. 
+\end{frame}
+
+% % % 
+\begin{frame}[c]
+\begin{exe}[cf. Problems 69-70]\label{exe:probs69-70}
+Write down the addition table for $G/H$ in 
+\begin{enumerate}[(a)]
+\item Exercise \ref{exe:prob66}.
+\item Exercise \ref{exe:prob67}.
+\end{enumerate}
+\end{exe}
+
+%{\bf EXAMPLE 21}
+\end{frame}
+
+% % % % %
+\subsection[\subsecname]{Non-obvious isomorphisms}
+% % %
+\begin{frame}{\subsecname}
+\begin{ex}\label{ex:isoToZ6}
+Let $G=\Z\times \Z$ and define 
+\begin{align*}
+H=(3,0)G+(0,2)G &= \{m(3,0)+n(0,2)\mid m,n\in \Z\} \\
+	&= \{(3m,2n)\mid m,n\in \Z\}.
+\end{align*}
+\end{ex}
+
+\smallGap
+Think of the elements in $H$ as movements on a grid indexed by $\Z\times \Z$.  The generator $(3,0)$ is right by 3; the generator $(0,2)$ is up by 2.  
+
+\smallGap 
+The cosets of $H$ in $G$ are: 
+\smallGap
+\[
+\begin{aligned}
+\die{6} &:=(0,0)+H=H \\
+\die{1} &:=(1,1)+H \\
+\die{2} &:=(2,0)+H
+\end{aligned} \qquad	
+\begin{aligned}
+\die{3} &:=(0,1)+H \\
+\die{4} &:=(1,0)+H \\
+\die{5} &:=(2,1)+H
+\end{aligned}
+\]
+\end{frame}
+
+% % %
+\begin{frame}
+Compare the addition table for $G/H$ to the one for $\Z/6\Z$:
+\[
+\begin{array}{c | c c c c c c }
+ G/H  & \die{6} & \die{1} & \die{2} & \die{3} & \die{4} & \die{5} \\
+ \hline
+ \die{6} & \die{6} & \die{1} & \die{2} & \die{3} & \die{4} & \die{5} \\ 
+ \die{1} & \die{1} & \die{2} & \die{3} & \die{4} & \die{5} & \die{6} \\
+ \die{2} & \die{2} & \die{3} & \die{4} & \die{5} & \die{6} & \die{1} \\
+ \die{3} & \die{3} & \die{4} & \die{5} & \die{6} & \die{1} & \die{2} \\
+ \die{4} & \die{4} & \die{5} & \die{6} & \die{1} & \die{2} & \die{3} \\
+ \die{5} & \die{5} & \die{6} & \die{1} & \die{2} & \die{3} & \die{4}
+\end{array}
+\qquad
+\begin{array}{c | c c c c c c }
+ \Z/6\Z  & 0 & 1 & 2 & 3 & 4 & 5 \\
+ \hline
+ 0 & 0 & 1 & 2 & 3 & 4 & 5 \\ 
+ 1 & 1 & 2 & 3 & 4 & 5 & 0 \\
+ 2 & 2 & 3 & 4 & 5 & 0 & 1 \\
+ 3 & 3 & 4 & 5 & 0 & 1 & 2 \\
+ 4 & 4 & 5 & 0 & 1 & 2 & 3 \\
+ 5 & 5 & 0 & 1 & 2 & 3 & 4
+\end{array}
+\]	
+
+\smallGap
+\textbf{Conclusion:} $G/H\cong \Z/6\Z$ via the correspondence in the addition tables.
+
+\smallGap
+\begin{que}
+What else is $G/H$ isomorphic to?
+\end{que}
+\end{frame}
+
+% % %
+%\begin{frame}
+%\begin{ex}
+%{\bf EXAMPLE $\Z^2/\langle(2,-2),(2,2)\rangle$.}
+%\end{ex}
+%\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{exe}[cf. Problem 72]\label{exe:prob72}
+``Simplify" the following \vocab{group presentations} (a term we define in Section \ref{sec:2p10FTOFinitelyGeneratedAbelianGroups}) by exhibting an isomorphism in each case.
+\begin{enumerate}
+\item $\Z\times \Z/\langle(1,1)\rangle$
+\item\label{exept:prob72-2} $\Z\times \Z/\langle(2,-1),(-1,2)\rangle$
+\end{enumerate} 
+\end{exe}
+\end{frame}
+
+% % % % %
+%\subsection[\subsecname]{Quotient means kill}
+% % %
+%\begin{frame}[c]{\subsecname}
+%We saw in Example \ref{ex:ZmodnZ}, the (group) homomorphism
+%\begin{align*}
+%\varphi : \Z &\to \Z/n\Z \\
+%m &\mapsto m\mod n
+%\end{align*}
+%is surjective, and $\ker{\varphi}=n\Z$.  We say $\varphi$ \vocab{kills} $n$.  
+%
+%\smallGap
+%Generalizing this notion:
+%\begin{exe}[cf. Problem 73]\label{exe:prob73}
+%Prove that if $H\norml G$ then the natural group homomorphism 
+%\begin{align*}
+%\bar{\psi}: G &\to G/H \\
+%	g &\mapsto gH
+%\end{align*}
+%is surjective.  Colloquially, when we apply $\bar{\psi}$ we say we are \emph{killing} the subgroup $H$.  %{\bf ADDRESS THE BAR}
+%\end{exe}
+%\end{frame}
+
+\begin{comment}
+% % % % %
+\answerKey
+% % %
+\begin{frame}{\subsecname}
+\exeSol{exe:normalKernel}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol{exe:normalSubgroups}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 66)]{exe:prob66}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 67)]{exe:prob67}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 68)]{exe:prob68}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol{exe:quotientGroup}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problems 69-70)]{exe:probs69-70}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 72)]{exe:prob72}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 73)]{exe:prob73}
+\end{frame}
+
+\end{comment}
+% % % % % % % % % %
+\end{document}

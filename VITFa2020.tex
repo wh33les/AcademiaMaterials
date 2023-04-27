@@ -1,0 +1,639 @@
+%\documentclass[notes=only]{beamer}   % only notes
+\documentclass[%handout,
+	%notes, 
+	12pt]{beamer}
+%%% The following snipet is from https://tex.stackexchange.com/questions/6348/problem-with-beamers-pause-in-alignments/6352
+\mode<presentation> { \setbeamercovered{%transparent
+	invisible} }
+\setbeamertemplate{navigation symbols}{}
+\makeatletter
+\def\beamerorig@set@color{%
+  \pdfliteral{\current@color}%
+  \aftergroup\reset@color
+}
+\def\beamerorig@reset@color{\pdfliteral{\current@color}}
+\makeatother
+%%% ... attempt to make pause work in an align environment because I really wanted this effect
+\usepackage{lmodern} % this package avoids a pdftex font compile error
+
+\usepackage{xcolor}
+%\usepackage{subfiles}
+%\usepackage{multicol}
+\usepackage{url}
+\usepackage{tikz}
+%\usepackage{tkz-euclide}
+%\usetkzobj{all}
+\usepackage{comment}
+\usepackage[mathscr]{euscript}
+%\usepackage{enumerate}
+%\usepackage{paralist}
+\usepackage[all,pdf]{xy}
+	\CompileMatrices
+\usepackage{cancel}	
+\usepackage{url}
+	
+\usetheme{Warsaw}
+\colorlet{powCol}{cyan!70!blue}
+\colorlet{bkCol}{cyan}
+\usecolortheme[named=powCol]{structure}
+\usecolortheme{beaver}
+\setbeamercolor{titlelike}{fg=powCol}	
+\setbeamercolor{palette primary}{fg=powCol}
+\setbeamercolor{palette secondary}{fg=powCol}
+\setbeamercolor{palette tertiary}{fg=powCol}
+\setbeamercolor{palette quaternary}{fg=powCol}
+
+% % %		
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{lem}{Lemma}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem{que}{Big question}
+\newtheorem{ex}{Example}
+\newtheorem{exe}{Exercise}
+\newtheorem{dfn}{Definition}
+
+%\everymath{\displaystyle}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\DeclareMathOperator{\pr}{\mathfrak B}
+\DeclareMathOperator{\Var}{\mathcal V}
+\DeclareMathOperator{\I}{I}
+\DeclareMathOperator{\hgt}{ht}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Grass}{Grass}
+\DeclareMathOperator{\Graph}{Graph}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\fr}{fr}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\cl}{c\ell}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\ch}{char}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\Pf}{Pf}
+\DeclareMathOperator{\Prj}{\mathbb P}
+\DeclareMathOperator{\inj}{\hookrightarrow}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\SP}{Sp}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\rref}{rref}
+
+% % % % % % % % % % 
+
+\title[Defining equations for matroid varieties]{Defining equations for matroid varieties -- using the Grassmann-Cayley algebra}
+\subtitle{Virtual Inspiring Talks Series%\small  \\ 
+	%\footnotesize 
+	}% \\
+	% \\
+	%
+\author[A. K. Wheeler]{Ashley K. Wheeler%
+	%\vspace{-0.75pc}
+	}
+\institute{\color{powCol}Mount Holyoke College%
+	%\vspace{-0.6pc}
+	}
+\date{%\small 
+	Fall 2020}
+\logo{background from \emph{Euclidea}}
+
+% % % % % 
+\begin{document}
+
+\usebackgroundtemplate{
+	\includegraphics[width=\paperwidth,height=\paperheight]{JTS2020PascalBkgd.eps}
+	}
+	
+% % %
+\begin{frame}
+%\large
+\titlepage
+\end{frame}
+
+% % % 
+\begin{frame}
+\begin{flushright} \textcolor{powCol}{Thank-you for the invitation to speak!} \end{flushright}
+
+\vspace{0.075pc}
+\hrule
+
+\pause
+\vspace{1pc}
+\textcolor{powCol}{About me:} \pause
+\vspace{0.25pc}
+\begin{itemize}
+\item Biracial, 2nd generation college student \pause
+\item Military family \pause
+\item Education: USAFA \pause $\to$ KState \pause $\to$ Michigan
+\end{itemize}
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+\textcolor{powCol}{About the project:} \pause
+\vspace{0.25pc} 
+\begin{itemize}
+\item Joint w/ Jessica Sidman (MHC) and Will Traves (USNA). 
+\[
+\includegraphics[scale=0.025]{sidman}
+\quad
+\includegraphics[scale=0.25]{traves}
+\]
+
+\pause
+\vspace{-0.5pc}
+\item Paper accepted to \textit{Journal of Combinatorial Theory, Series A} this year (and we've already got a citation!). \pause
+\item \textcolor{powCol}{Goal:} To find defining equations for matroid varieties.
+\end{itemize}
+\end{frame}
+	
+% % % 
+\begin{frame}{}{}
+\textcolor{powCol}{Outline:}
+\vspace{0.25pc}
+\begin{itemize}
+\item Front matter
+\item Introduction: What is a matroid?
+\item Problem: Defining equations for matroid varieties
+\item Paradigm shift: Matroids as point configurations
+\item Tool: Grassmann-Cayley algebra
+\item Back matter
+\end{itemize}
+
+\pause
+\vspace{1pc}
+\textcolor{powCol}{Advice:} Refer to Ravi Vakil's \textit{3 Things} when viewing this (or any other) math talk!
+\end{frame}
+	
+% % % % %
+\section{Introduction: What is a matroid?}
+
+% % % 
+\begin{frame}{Introduction}{What is a matroid?}
+{\color{powCol}Q:} Which collections of 3 columns form a basis for the column space of $A$?  
+\[
+A=
+\begin{pmatrix}
+-1 & 1 & 2 & 3 & 4 \\
+-1 & 1 & 2 & 0 & -2 \\
+1 & 1 & 1 & 1 & 1
+\end{pmatrix}
+\]
+\pause How can we tell?
+\end{frame}
+
+% % % 
+\begin{frame}
+Could row reduce A first.  
+\[
+\begin{pmatrix}
+-1 & 1 & 2 & 3 & 4 \\
+-1 & 1 & 2 & 0 & -2 \\
+1 & 1 & 1 & 1 & 1
+\end{pmatrix}
+\to
+\rref A = 
+\begin{pmatrix}
+1 & 0 & -\frac{1}{2} & 0 & \frac{1}{2} \\
+0 & 1 & \frac{3}{2} & 0 & -\frac{3}{2} \\
+0 & 0 & 0 & 1 & 2
+\end{pmatrix}
+\]
+
+\pause 
+\vspace{0.5pc}
+Preferred way: Look for non-zero $\mathbf 3$\textbf{-minors} of $A$ (or of $\rref A$).  
+
+\vspace{1pc}
+{\color{powCol}Fact:} Columns of an $r\times r$ matrix are linearly independent if and only if the determinant of the matrix is non-zero.
+\end{frame}
+
+% % %
+\begin{frame}
+Number the columns of $A$ 1 through 5.  Here are the 3-minors, according to their column indices:
+\begin{align*}
+\{1,2,3\}\to 0 & \qquad \{1,2,4\}\to -6 & \{1,2,5\}\to -12 \\ 
+\{1,3,4\}\to -9 & \qquad \{1,3,5\}\to -18 & \{1,4,5\}\to -9\\
+\{2,3,4\}\to 3 & \qquad \{2,3,5\}\to -6 & \{2,4,5\}\to -11 \\
+\{3,4,5\}\to 0 & & 
+\end{align*}
+
+\pause
+\vspace{0.5pc}
+The \textbf{matroid} $\mathscr M_A$ on $A$ is given by the set: 
+
+\vspace{-1.75pc}
+\[
+\mathscr B = \{\text{all $3$-tuples except $\{1,2,3\}$ and $\{3,4,5\}$}\}\subset \{1,\dots,5\}
+\]
+
+\vspace{-0.5pc}
+The sets in $\mathscr B$ are called \textbf{bases} for the matroid $\mathscr M_A$.
+\end{frame}	
+
+% % % 
+\begin{frame}{}{}
+{\color{powCol}
+Matroids are a generalization of the collections of linearly independent columns of a matrix.
+}
+
+\pause
+\vspace{1pc}
+{\color{powCol}Applications:} Where are matroids used? \pause
+\begin{itemize}
+\item \emph{Combinatorial optimization:} artificial intelligence, machine learning, software engineering; example: travelling salesman problem \pause
+\item \emph{Coding theory:} error correcting, data compression, cryptography \pause
+\item \emph{Network theory:} particle physics, biology, social networks; example: bridges of K\"onigsberg problem
+\end{itemize}
+\end{frame}
+
+% % % 
+%\begin{frame}
+%\vspace{-0.5pc}
+%\begin{center}
+%\includegraphics[scale=0.625]{Konigsberg_bridges}
+%\end{center}
+%\end{frame}
+
+% % % % %
+\section{Problem: Defining equations for matroid varieties}
+	
+% % % 
+\begin{frame}{Problem}{Defining equations for matroid varieties}
+{\color{powCol}Q:} Given a matroid on a matrix $A$, what other matrices have the same matroid as $A$? (e.g., $\rref A$)  
+
+\pause
+\vspace{1pc}
+Consider this \textbf{generic matrix}:
+\[
+X=\begin{pmatrix}
+x_{11} & x_{12} & x_{13} & x_{14} & x_{15} \\
+x_{21} & x_{22} & x_{23} & x_{24} & x_{25} \\
+x_{31} & x_{32} & x_{33} & x_{34} & x_{35}
+\end{pmatrix}
+\]
+We want all possible $x$-values that will give the same matroid (i.e. same columns as bases) as $A$.  
+\end{frame}
+
+% % % 
+\begin{frame}{}{}
+\textbf{Defining equations} are a system of equations in the $x$'s whose solution set minimally cuts out all of the matrices with matroid $\mathscr M_A$.  
+
+\pause
+\vspace{1pc}
+Call this solution set $\Var_A$, the \textbf{matroid variety} on $A$.
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+\[
+\includegraphics[scale=0.1]{mnev}
+\
+\includegraphics[scale=0.2]{sturmfels}
+\
+\includegraphics[scale=0.1]{knutson}
+\
+\includegraphics[scale=0.2]{lam}
+\
+\includegraphics[scale=0.2]{speyer}
+\]
+
+{\color{powCol} Mn\"ev (1985), Sturmfels (1989), Knutson, Lam, \& Speyer (2013): \textbf{All ``hell'' breaks loose when we try to find defining equations for $\Var_A$.}} 
+
+\pause
+\vspace{1pc}
+Why?  \pause Two reasons: \pause
+\begin{itemize}
+\item The \emph{Zariski topology} (beyond the scope of this talk). \pause
+\item The equations are not obvious (as we shall see).
+\end{itemize} 
+\end{frame}
+
+% % % % %
+\section{Paradigm shift: Matroids as point configurations}
+
+% % %
+\begin{frame}{Paradigm shift}{Matroids as point configurations}
+{\color{powCol}Idea:} Think of the columns of $A$ as points in the plane. 
+
+\pause
+\vspace{1pc}
+The columns of the matrix $A$ are vectors in 3-space, that span lines through the origin.
+
+\vspace{1pc}
+If we cut these lines with a plane then the lines become points in the plane.
+
+\pause
+\vspace{1pc}
+Why would we do this?
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+\[
+\includegraphics[scale=0.17]{matroidA.eps}
+\]
+
+{\color{powCol}Q:} What do you notice about the points in relation to the matroid $\mathscr M_A$?
+
+\pause
+\vspace{1pc}
+Points $1$, $2$, and $3$ are collinear if and only if $\{1,2,3\}$ is not a basis for $\mathscr M_A$.  We say the \textbf{bracket} $[123]$ vanishes, or equals 0.  
+\end{frame}
+
+% % %
+\begin{frame}
+The bracket is shorthand for determinant:
+\[
+[123]=0\iff 
+\begin{vmatrix}
+x_{11} & x_{12} & x_{13} \\
+x_{21} & x_{22} & x_{23} \\
+x_{31} & x_{32} & x_{33}
+\end{vmatrix}
+=0
+\]
+This is a defining equation in the $x$'s!
+
+\pause
+\vspace{1pc}
+{\color{powCol}Q:} What is another defining equation for $\Var_A$?
+
+\pause
+\vspace{1pc}
+Are there others? \pause ???
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+{\color{powCol}Example (Ford 2013):} 
+
+\vspace{0.5pc}
+$\mathscr M_{\text{pencil}}=$ matroid on a $3\times 7$ matrix with \emph{non}bases $\{1,2,7\},\{3,4,7\},\{5,6,7\}$  
+
+\vspace{-1pc}
+\begin{center}
+\includegraphics[scale=0.225]{GEFMVpencil.eps}
+\end{center}
+{\color{powCol}Q:} Which brackets vanish?
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+\[
+\includegraphics[scale=0.35]{ford}
+\]
+{\color{powCol}All hell breaks loose:} $[134][256]-[234][156]=0$ is also a defining equation for $\Var_{\text{pencil}}$.  \pause How could we have known this?!
+
+\pause
+\vspace{1pc}
+{\color{powCol}Ans:} The \textbf{Grassmann-Cayley algebra}.  %\pause It lets us produce polynomial equations in the brackets (i.e. determinants).
+\end{frame}
+
+% % % % %
+\section{Tool: Grassmann-Cayley algebra}
+
+% % % 
+\begin{frame}{Tool}{Grassmann-Cayley algebra}
+The Grassmann-Cayley algebra was invented to do \emph{synthetic projective geometry}.
+
+\vspace{1pc}
+We do arithmetic on the points (vectors) themselves, and obtain expressions in the brackets.
+
+\pause
+\vspace{1pc}
+There are two operations:
+\end{frame}
+
+% % %
+\begin{frame}  
+\textbf{join} ($\vee$): refers to the line passing through points
+\[
+\includegraphics[scale=0.35]{GEFMVjoin.eps}
+\]
+The line joining $1$ and $2$ is $1\vee 2$, or $12$.  
+
+\pause
+\vspace{1pc}
+Three points joined makes a bracket, and three collinear points make the bracket vanish.
+\end{frame}
+
+% % % 
+\begin{frame}
+\textbf{meet} ($\wedge$): refers to the intersection of two lines 
+\[
+\includegraphics[scale=0.1]{GEFMVmeet.eps}
+\]
+The meet of the lines $1\vee 2$ and $3\vee 4$ is $(1\vee 2)\wedge (3\vee 4)$, or $12\wedge 34$.
+
+\pause 
+\vspace{1pc}
+The meet operation uses \emph{shuffle products}, which also produce expressions in the brackets.
+\end{frame}
+
+% % % 
+\begin{frame}{}{}
+\begin{center}
+\includegraphics[scale=0.225]{GEFMVpencil.eps}
+\end{center}
+
+We have $((1\vee 2)\wedge(3\vee 4))\vee 5\vee 6=0$, because these three points are collinear.  \pause Here's how to apply the shuffles: \pause
+\begin{align*}
+(12\wedge 34)\vee 56 &= ([134]2-[234]1)56 \\
+ &= [134][256]-[234][156] = 0
+\end{align*}
+\end{frame}
+
+% % % % %
+%\section{Application: Pascal's theorem}
+
+% % %
+\begin{frame}{}{}%{Application}{Pascal's theorem}
+%\vspace{3.46pc}
+{\color{powCol}Example:} \textbf{Pascal's theorem} says if six points on a conic are joined in the way illustrated below, then the resulting intersection points (7, 8, and 9) are collinear.
+\begin{center}
+\includegraphics[scale=0.25]{GEFMVpascals-theorem.eps}
+\end{center}
+\end{frame}
+
+% % %
+\begin{frame}{}{}
+\begin{center}
+\includegraphics[scale=0.25]{GEFMVpascals-theorem.eps}
+\end{center}
+
+We have a matroid $\mathscr M_{\text{Pascal}}$ corresponding to this configuration of points.  \pause  Let's find defining equations for $\Var_{\text{Pascal}}$.
+
+\pause
+\vspace{1pc}
+{\color{powCol}Q:} Which brackets vanish?
+\end{frame}
+
+% % %
+\begin{frame} 
+\begin{thm}[Sidman, Traves, W] 
+The defining equations for the matroid variety $\Var_{\text{Pascal}}$ include at least one quartic, three independent cubics, and three independent quadrics in the brackets, besides the vanishing brackets
+$
+[127], [238], [349], [457], [568], [169], [789]$.
+\end{thm}
+\end{frame}
+
+% % % 
+\begin{frame}{}{}
+{\color{powCol}Finding the quartic:}
+The statement of Pascal's theorem says we have 
+$%\[
+(12\wedge 45)\vee (23\wedge 56)\vee (34\wedge 61) = 0.
+$%\]
+
+\begin{center}
+\includegraphics[scale=0.25]{GEFMVpascals-theorem.eps}
+\end{center}
+\end{frame}
+
+% % % 
+\begin{frame}
+Apply the shuffle products:
+\begin{align*}
+& (12\wedge 45)\vee (23\wedge 56)\vee (34\wedge 61) \\
+ =&\ ([145]2-[245]1)\vee([256]3-[356]2)\vee([361]4-[461]3) 
+\end{align*}
+\end{frame}
+
+% % % 
+\begin{frame}
+Now ``foil":
+\begin{align*}
+ & {\color{powCol}(}([145]2-[245]1)\vee([256]3-[356]2){\color{powCol})}\vee([361]4-[461]3)  \\ 
+ =&\ 
+ {\color{powCol}(}[145][256]23-[145][356]22-[245][256]13+[245][356]12{\color{powCol})} \\
+ & \quad \vee([361]4-[461]3) 
+\end{align*}
+\end{frame}
+
+% % %
+\begin{frame}
+Finish ``foiling": 
+\begin{align*}
+ & \left([145][256]23-[145][356]22-[245][256]13+[245][356]12\right) \\
+ & \quad \vee([361]4-[461]3) \\
+ =&\ [145][256][361][234]-[145][256][461][233] \\
+ & \quad -[145][356][361][224]+[145][356][461][223] \\
+ & \quad -[245][256][361][134]+[245][256][461][133] \\
+ & \quad +[245][356][361][124]-[245][356][461][123] 
+\end{align*}
+
+\pause
+{\color{powCol}Q:} What happens when two numbers share a bracket?
+\end{frame}
+
+% % %
+\begin{frame}
+\[
+[233]\leftrightarrow
+\begin{vmatrix}
+x_{12} & x_{13} & x_{13} \\
+x_{22} & x_{23} & x_{23} \\
+x_{32} & x_{33} & x_{33}
+\end{vmatrix}
+\]
+{\color{powCol}Q:} What happens to a matrix with two repeated columns?
+
+\pause
+\vspace{1pc}
+It means we get a bunch of cancelling...
+\end{frame}
+
+% % % 
+\begin{frame} 
+\begin{align*}
+ & [145][256][361][234]-\cancel{[145][256][461][233]} \\
+ & \quad -\cancel{[145][356][361][224]}+\cancel{[145][356][461][223]} \\
+ & \quad -[245][256][361][134]+\cancel{[245][256][461][133]} \\
+ & \quad +[245][356][361][124]-[245][356][461][123] \\
+ =&\ [145][256][361][234]-[245][256][361][134] \\
+ & \quad +[245][356][361][124]-[245][356][461][123]=0
+\end{align*}
+
+\pause
+The statement of Pascal's theorem gives us a non-obvious defining equation for $\Var_{\text{Pascal}}$!
+\end{frame}
+
+% % % 
+\begin{frame}{}{}
+{\color{powCol} Conclusion:} \pause
+\vspace{0.25pc}
+\begin{itemize}
+\item Finding defining equations for matroid varieties is HARD. \pause
+\item The Grassmann-Cayley algebra lets us find \emph{some} of the defining equations, by using the geometry of the matroids when thought of as point configurations.
+\end{itemize}
+\pause
+\vspace{1pc}
+\textcolor{powCol}{Further work:} \pause
+\vspace{0.25pc}
+\begin{itemize}
+\item Are our equations the only defining equations for $\Var_{\text{Pascal}}$? \pause
+\item Defining equations for matroid varieties given by other point configurations (e.g., Pappus' theorem)? \pause
+\item Defining equations for matroid varieties given by wheel graphs?
+\end{itemize}
+\end{frame}
+
+% % % 
+\begin{frame}
+\textcolor{powCol}{Q \& A:} \pause
+\vspace{0.25pc}
+\begin{itemize}
+\item[(1)] What do you love most about mathematics? \pause
+\item[(2)] What was your favorite math topic as an undergraduate? \pause
+\item[(3)] How did you prepare for graduate school? \pause
+\item[(4)] What was the most challenging part of grad school and how did you handle it? \pause
+\item[(5)] Do you have any general advice for students considering pursuing the doctorate? \pause
+\end{itemize}
+
+\vspace{1pc}
+\textcolor{powCol}{Contact:} \url{awheeler@mtholyoke.edu}
+\pause
+\vspace{1pc}
+\hrule
+
+%\pause
+\vspace{0.25pc}
+{\color{powCol}
+\begin{flushright}
+Thank-you!
+\end{flushright}
+}
+\end{frame}
+
+% % % % %
+%\usebackgroundtemplate{
+%\includegraphics[width=\paperwidth,height=\paperheight]{JTS2020PascalBkgdHexagon.png}
+%}
+	
+% % %
+%\begin{frame}{}{}
+%
+%\end{frame}
+%
+%\usebackgroundtemplate{
+%\includegraphics[width=\paperwidth,height=\paperheight]{JTS2020PascalBkgd.png}
+%}
+%	
+% % %
+%\begin{frame}{}{}
+%
+%\end{frame}
+%
+\usebackgroundtemplate{
+\includegraphics[width=\paperwidth,height=\paperheight]{JTS2020PascalBkgd.eps}
+}
+
+% % % % % % % % % % 
+\end{document}

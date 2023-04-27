@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Diagonalization of integer matrices}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Linear algebra}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Normalizing}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{Smith normal form}{14}{0}{1}

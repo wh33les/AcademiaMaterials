@@ -1,0 +1,13 @@
+\frametitle{}\framesubtitle {}
+\begin{exe}[cf. Problem 78]\label{exe:prob78}
+Use the Sage command \verb|smith_form| to diagonalize
+\[
+\begin{pmatrix}
+1 & 2 & 3 & -4 \\
+-5 & 6 & 7 & 8 \\
+-9 & -10 & 11 & 12 \\
+13 & 14 & -15 & 16
+\end{pmatrix}.
+\]
+What other information is obtained from \verb|smith_form|?
+\end{exe}

@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Cyclic groups}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Definition}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Finite cyclic groups}{4}{0}{1}

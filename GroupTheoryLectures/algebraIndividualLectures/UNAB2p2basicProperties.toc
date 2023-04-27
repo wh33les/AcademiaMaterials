@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Basic properties of groups}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Identities and inverses}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Integer exponents}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Solutions to exercises}{12}{0}{1}

@@ -1,0 +1,103 @@
+\documentclass[../algebraNotesMSRI-UP2016.tex]{subfiles}
+
+\begin{document}
+
+\section[\S \thesection]{Orders of groups and elements}
+% % % % %
+\subsection[\subsecname]{Order of an element}
+% % %
+\begin{frame}{\subsecname}
+\begin{dfn}
+Let $G$ denote a group with $g\in G$.
+\begin{enumerate}[(a)]
+\item $g$ has \vocab{infinite order} means all the non-negative powers of $g$ are distinct.
+\item $g$ has \vocab{order $d$} means $d$ is the smallest positive integer such that $g^d=g^0=1$.  We say $g$ has \vocab{finite order}.
+\end{enumerate} 
+We write $|g|$ or $\ord(g)$ to denote the order of $g$.
+\end{dfn}
+
+\smallGap
+\begin{que}[cf. Problem 54]
+What is the order of each element in $\Z_{12}$?
+\end{que}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{exe}[cf. Problem 53]\label{exe:prob53}
+In $G=(\GL(2,\R),\cdot)$ find the order of each of the following elements:
+\[
+g=\begin{pmatrix}
+	0 & -1 \\
+	1 & 0 
+	\end{pmatrix}
+\qquad
+h=\begin{pmatrix}
+	3 & 5 \\
+	4 & 7
+	\end{pmatrix}
+\qquad 
+j=\begin{pmatrix}
+	-\frac{1}{2} & -\frac{\sqrt 3}{2} \\
+	\frac{\sqrt 3}{2} & -\frac{1}{2}
+	\end{pmatrix}
+\]
+\end{exe}
+
+\smallGap
+\begin{exe}[cf. Problem 55]\label{exe:prob55}
+Find the order of each element in the sandpile group $\mathscr S(\Gamma)$ corresponding to the graph in Figure \ref{fig:graphWithLoops}. 
+\end{exe}
+\end{frame}
+
+% % % % %
+\subsection[\subsecname]{Order of a group}
+% % %
+\begin{frame}[c]{\subsecname}
+\begin{dfn}
+The \vocab{order} of a group $G$ is its cardinality as a set, $|G|$.
+\end{dfn}
+
+\smallGap
+\textbf{Caution:} The \emph{dihedral group $D_n$ of order $n$} has group order not $n$, but $2n$.  
+
+\smallGap
+\begin{exe}\label{exe:orderOfSn}
+Find the order of the \emph{symmetric group of order $n$}, $S_n$ (it's not $n$).
+\end{exe}  
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{thm}[Lagrange's Theorem]\label{thm:Lagrange}
+Given a finite (order) group $G$, the order of every subgroup of $G$ divides $|G|$.
+\qed
+\end{thm}
+
+\smallGap
+\begin{que}
+Verify Lagrange's Theorem for $\Z_{12}$. 
+\end{que}
+\end{frame}
+
+\begin{comment}
+% % % % %
+\answerKey
+% % %
+\begin{frame}{\subsecname}
+\exeSol[(cf. Problem 53)]{exe:prob53}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 55)]{exe:prob55}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol{exe:orderOfSn}
+\end{frame}
+
+\end{comment}
+% % % % % % % % % %
+\end{document}

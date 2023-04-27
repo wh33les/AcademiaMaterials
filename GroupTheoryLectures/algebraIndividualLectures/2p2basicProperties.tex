@@ -1,0 +1,230 @@
+\documentclass[../algebraNotesMSRI-UP2016.tex]{subfiles}
+
+\begin{document}
+
+\section[\S \thesection]{Basic properties of groups}
+% % % % %
+\subsection[\subsecname]{Identities and inverses}\label{subsec:identitiesInverses}
+% % %
+\begin{frame}{\subsecname}
+In mathematics defining a new concept entails pointing out the more immediate, even obvious, results -- with proof.  These are known as \vocab{propositions}.
+
+\smallGap
+\begin{prop}
+The identity element of a group $(G,\star)$ is unique.
+\end{prop}
+
+\smallGap
+\begin{proof}
+Suppose $e,e'\in G$ are both identity elements.  Then we have 
+\[
+e=e\star e'=e'\star e=e'
+\] 
+so $e=e'$ are the same element.
+\end{proof}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+Often, when multiplicative notation is used $1$ denotes the identity element.  Likewise, we use $0$ to denote the identity under additive notation.  
+
+\smallGap
+\begin{que} The set $\Z$ has both $0$ and $1$.  Are they equal?  If not, then which is the true identity element?  \textit{Hint: Under which operation is $\Z$ a group?}
+\end{que}
+
+\smallGap
+We shall see in Section \ref{subsec:cyclicDefs}, that $1$ \vocab{generates} the group $\Z$.  Meanwhile, $0$ generates the \vocab{trivial} subgroup of $\Z$.
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{prop}[The Cancellation Law]
+Let $(G,\star)$ denote a group.  For every $a,b,c\in G$, 
+\[
+a\star b=c\star b\implies a=c\qquad\text{ and }\qquad b\star a=b\star c\implies a=c.
+\]
+\end{prop}
+
+\smallGap
+The $\implies$ symbol means ``implies".
+
+
+\smallGap
+\begin{exe}\label{exe:cancellationLaw}
+Prove the Cancellation Law.
+\end{exe}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+To ease readability, in the following we shall use multiplicative notation, i.e, if $g,h$ are elements in the group $G=(G,\star)$, then we write $gh=g\star h$.
+
+\smallGap
+\begin{prop}[Properties of Inverses]\label{prop:inverses}
+Let $G$ denote a group. 
+\begin{enumerate}[(a)]
+\item For every $g\in G$, the inverse $g\1$ is unique.
+\item For every $g\in G$, $(g\1)\1=g$.
+\item (\vocab{Shoes-Socks Theorem})  For every $g,h\in G$, $(gh)\1=h\1g\1$.
+\end{enumerate}
+\end{prop}
+
+\smallGap
+\begin{exe}[cf. Problem 45]\label{exe:inverses}
+Prove Proposition \ref{prop:inverses}.
+\end{exe}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+\begin{exe}[cf. Problem 46]\label{exe:abelian}
+Suppose $G$ is a group with the property that every element is its own inverse.  Prove $G$ must be abelian.
+\end{exe}
+
+\smallGap
+\begin{que}
+What is an example where the \vocab{converse} in Exercise \ref{exe:abelian} fails?  In other words, name an abelian group with an element that is not its own identity.
+\end{que}
+\end{frame}
+
+% % % % %
+\subsection[\subsecname]{Integer exponents}\label{subsec:integerExponents}
+% % %
+\begin{frame}[c]{\subsecname}
+\textbf{Recall:} In $\R$ we have the property that multiplying exponents with the same base is the same as adding the exponents.  In other words, for $a\in \R$, and integers $n,m$, we have 
+\begin{equation}\label{eq:expRule1}
+a^na^m=a^{n+m}.
+\end{equation}
+
+\smallGap
+Consequently, we also have the property that
+\begin{equation}\label{eq:expRule2}
+(a^n)^m=\underbrace{a^n\cdots a^n}_{\text{$m$ times}}=a^{\overbrace{\scriptstyle n+\cdots+n}^{\scriptstyle\text{$m$ times}}}=a^{m\cdot n}.
+\end{equation}
+\end{frame}
+
+% % %
+\begin{frame}[c]
+Suppose $g$ is in the group $G=(G,\star)$ and $n\in\N$.  We define $g^1:=g$, then recursively, $g^n:=g^{n-1}\star g^1=g^{n-1}g$.  By associativity of groups, $g^n=\underbrace{g\cdot\cdots \cdot g}_{\text{$n$ times}}$.
+
+\smallGap
+\begin{que}
+What are the analogous notions when we use \vocab{additive notation}, i.e., for $g,h$ in the group $G=(G,\star)$ write $g+h=g\star h$?
+\end{que}
+
+\smallGap
+\begin{exe}\label{exe:expRules1and2}
+Prove Equations \eqref{eq:expRule1} and \eqref{eq:expRule2} hold for groups.
+\end{exe}
+\end{frame}
+
+%%%%%%%%%%UNABRIDGED%%%%%%%%%%
+\begin{comment}
+% % % 
+\begin{frame}[c]
+In the reals we also had a notion of zero and negative exponents, namely, for $a\in\R$ and a positive integer $n$,
+\[
+a^0=1\qquad\text{ and }\qquad a^{-n}=\frac{1}{a^n}.
+\]
+We shall generalize this notion for groups.
+\end{frame}
+
+% % %
+\begin{frame}[c]
+Again, use multiplicative notation for the group $G$.  To stay consistent with the definition of a group and with our definition of positive exponents, we must have 
+\[
+g^0g = g^0g^1 = g^{0+1}=g =eg,
+\]
+where $e$ is the identity element.  We can right-cancel the $g$ in $g^0g=eg$ to conclude $g^0=e$.  This is why under multiplicative notation we often use $1$ to denote $e$.   
+%
+%\smallGap
+\end{frame}
+
+% % % 
+\begin{frame}
+Finally, for fixed $n\in\N$ we define $a^{-n}:=(a\1)^n$.  
+
+\smallGap
+\begin{exe}\label{exe:negExp}
+Show that indeed this definition of $a^{-n}$ is consistent with the rules of exponents.  In other words, show Equations \eqref{eq:expRule1} and \eqref{eq:expRule2} still work for negative exponents.
+\end{exe}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[c]
+Similarly, define $g^0:=e$ and for fixed $n\in \N$, define $a^{-n}:=(a\1)^n$.
+
+\smallGap
+\begin{que}
+What are the analogous notions under additive notation?
+\end{que}
+
+\smallGap
+\begin{exe}\label{exe:negExpD4}
+What are the negative exponents for each element in $D_4$, the dihedral group of order 4?  (See Example \ref{ex:D4} and Exercise \ref{exe:prob40}.)
+\end{exe}
+\end{frame}
+
+\begin{comment}
+% % % % %
+\answerKey
+% % % 
+\begin{frame}{\subsecname}
+\exeSol{exe:cancellationLaw}
+We manipulate each of the equations $a\star b=c\star b$ and $b\star a=b\star c$ using inverses, associativity, and the identity element, $e$:
+\begin{columns}
+\begin{column}{0.2\textwidth}
+	\begin{align*}
+	a\star b &= c\star b \\
+	(a\star b)\star b\1 &= (c\star b)\star b\1 \\
+	a\star (b\star b\1) &= c\star(b\star b\1) \\
+	a\star e &= c\star e \\
+	a &= c
+	\end{align*}
+\end{column}
+\begin{column}{0.2\textwidth}
+	\begin{align*}
+	b\star a &= b\star c \\
+	b\1\star(b\star a) &= b\1\star(b\star c) \\
+	(b\1\star b)\star a &= (b\1\star b)\star c \\
+	e\star a &= e\star c \\
+	a &= c
+	\end{align*}
+\end{column}
+\end{columns}	
+\qed
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 45)]{exe:inverses}
+
+\qed
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 46)]{exe:abelian}
+
+\qed
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol[(cf. Problem 47)]{exe:expRules1and2}
+
+\qed
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol{exe:negExp}
+\end{frame}
+
+% % %
+\begin{frame}
+\exeSol{exe:negExpD4}
+\end{frame}
+
+\end{comment}
+% % % % % % % % % % % % % % % % % % % %
+\end{document}

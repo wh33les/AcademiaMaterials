@@ -1,0 +1,43 @@
+\frametitle{}\framesubtitle {}
+\begin{ex}\label{ex:kernalAsAZeroSet}
+Define a linear map $f:\R^4\to \R^3$ via left multiplication by the matrix
+\[
+A=\begin{pmatrix}
+3 & 8 & 7 & 9 \\
+2 & 4 & 6 & 6 \\
+1 & 2 & 2 & 1
+\end{pmatrix}.
+\]
+The kernel of $f$ is exactly the nullspace of $A$.
+\end{ex}
+
+\smallGap
+Given $x,y,z,w\in \R$, we set up the equation:
+\begin{align*}
+\begin{matrix}
+\begin{pmatrix*}[r]
+3 & 8 & 7 & 9 \\
+2 & 4 & 6 & 6 \\
+1 & 2 & 2 & 1 \\
+\end{pmatrix*} \\
+\mbox{}
+\end{matrix} &
+\begin{pmatrix}
+x \\
+y \\
+z \\
+w
+\end{pmatrix}= \vect 0
+\end{align*}
+Row-reducing $A$, we get (via Sage)
+\[
+\begin{pmatrix*}[r]
+1 & 0 & 0 & -7 \\
+0 & 1 & 0 & 2 \\
+0 & 0 & 1 & 2
+\end{pmatrix*} \quad \implies
+\quad \left\{\begin{array}{l}
+	x=7w \\
+	y=z=-2w.
+	\end{array}\right.
+\]
