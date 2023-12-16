@@ -2,9 +2,11 @@
 
 Showcase of things I have used code to make throughout my academic career.  
 
-The ArkansasWebsite folder contains the files for my website from University of Arkansas.  Since I was able to hold onto those files, most of the links still work.
+Most of the folders just contain raw teaching materials I've used over the years.  The materials were made using LaTeX and the source files are included, too. 
 
-The GroupTheoryLectures are from MSRI-UP in 2016.
+<!-- The ArkansasWebsite folder contains the files for my website from University of Arkansas.  Since I was able to hold onto those files, most of the links still work. 
+
+The GroupTheoryLectures are from MSRI-UP in 2016. -->
 
 The cal2fa20Lectures are lectures I made when I taught calc II remotely at Mount Holyoke College.  I lost the source file.
 

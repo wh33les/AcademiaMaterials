@@ -1,0 +1,239 @@
+\documentclass[12pt]%, a4paper]
+{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Algebra II: Intro to Commutative Algebra} }
+%\chead{ \fancyplain{}{} }
+\rhead{ \fancyplain{}{\textit{Last updated:} \today} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+
+%\DeclareMathOperator{\Tor}{Tor}
+%\DeclareMathOperator{\Ext}{Ext}
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+
+
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\Large \textsc{Algebra II: Intro to Commutative Algebra}}
+\end{center}
+\begin{center}
+Spring 2022
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\rule{6in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Instructor:} & Ashley K. Wheeler & & &  \textbf{Time:} & Tues, Thurs 330-445p \\
+\textbf{Email:} &  \href{wheeler@math.gatech.edu}{wheeler@math.gatech.edu} & & & \textbf{Place:} & Skiles 269 
+\end{tabular}
+\end{minipage}
+\rule{6in}{0.4pt}
+\end{center}
+\vspace{.5cm}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+\noindent\textbf{Course pages:} 
+\begin{itemize}
+\item \url{http://www.math.lsa.umich.edu/~hochster/614F20/614.html}
+
+All notes and exercises are here.  This is a long course so we will cover as many topics as we can.
+
+%\item \url{https://wheeler.math.gatech.edu/spring-2022-math-6122-algebra-ii/}
+%
+%Syllabus and recorded lectures posted here.
+
+\item Canvas.  Announcements posted here.  Be sure to have your settings set to receive an email whenever an announcement is posted.
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Office hours:}  Virtual.  MW at 1030-1130a.  Use the Zoom link \url{https://us02web.zoom.us/j/6735626769} or the meeting ID 673 562 6769.
+
+\vskip.15in
+\noindent\textbf{References:} %\footnotemark
+%This is a  restricted list of various interesting and useful books that will be touched during the course. You need to consult them occasionally.
+\begin{itemize}
+\item M. F. Atiyah and I. G. MacDonald, {\textit{Introduction to Commutative Algebra}}, CRC Press, 1994.  This is the standard text on commutative algebra.  We will not reallly use it but it's good to have as a reference.
+\item David Eisenbud, {\textit{Commutative Algebra with a View Toward Algebraic Geometry}}, Springer, 1995.  A good supplement to Hartshorne's \textit{Algebraic Geometry}.  You will need it if you plan to do your project on a chapter from this book.  It is also a good reference for the background commutative algebra, such as homological algebra, in other projects.
+\item Winifried Bruns and J\"urgen Herzog, \textit{Cohen-Macaulay rings}, Cambridge University Press, 1993.  Beyond the scope of this course but a good reference if you want to continue to study commutative algebra.  You will need it if you decide to do your project on Cohen-Macaulay rings or determinantal rings.
+\end{itemize} 
+
+% \footnotetext{Downloadable ebook versions are available on AeLP.}
+
+\vskip.15in
+\noindent\textbf{Objectives:}  This course is primarily designed for graduate students.  Topics covered include localization, Krull dimension, Noether normalization, Hilbert's Nullstellensatz, chain conditions on rings and modules, tensor products, projective modules, primary decompostion, divisor class groups, and completion.
+
+\vskip.15in
+\noindent\textbf{Prerequisites:}
+An introductory grad course in algebra.  Background knowledge of algebraic geometry is not needed.
+
+
+%\vspace*{.15in}
+
+%\noindent \textbf{Tentative Course Outline:}
+%\begin{center} 
+%\begin{minipage}{5in}
+%\begin{flushleft}
+%Chapter 1 \dotfill ~$\approx$ 3 days \\
+%{\color{darkgreen}{\Rectangle}} ~A little of probability theory and graph theory	
+%\end{flushleft}
+%\end{minipage}
+%\end{center}
+
+%\vspace*{.15in}
+\newpage
+\noindent\textbf{Grading policy:} 
+\begin{itemize}
+\item Exercises (0\%).  Optional.  Problem sets are posted on Hochster's website. I won't grade them because the solutions are also posted there. % I can't enforce that you do the exercises, and I understand that you have other priorities.  However, you should do your best to try them.
+\item Board quizzes (0\%).  Also not for a grade, the objective of these quizzes is to test your knowledge of key definitions and theorems.  %Due to COVID concerns, we can't have written quizzes, so instead you will go to the board.  
+About once a week, on Thursdays,  %You should memorize the definitions and named theorems from the notes.  
+you will be quizzed on the material from the week before.  I will use a random number generator on my phone to choose someone to go to the board. Since it's random, you may end up going to the board twice, but never two weeks in a row.
+\item Final project and presentation (100\%).  To be done in groups of 3-4%(so that we have enough time for the presentations, we should have no more than 9 groups)
+.  Choose from the list of suggested topics or choose your own topic, with my approval.  You will write a 5-10 page report about your topic and give a 20 minute presentation during the last days of class.  %It sounds daunting, but the project deadlines should guide you!
+
+The topics are beyond the scope of this course, so it is expected that you will be able to fill in the details about relevant definitions in your report.  This may mean you have to consult outside resources, including textbooks, references given, and even Wikipedia.  %It is highly recommended you get started on the project early.  The material in these suggested readings is dense and will take awhile to digest.  I will periodically check on your groups during office hours to see how the work is progressing.
+
+%I will announce a week or two in advance when I would like to meet to discuss your projects.  
+At each project deadline (see below) you will meet with me during office hours to check in.  You can come to scheduled office hours or make an appointment, if the scheduled times don't work.  Everyone in your group must attend, but you don't have to attend together. 
+
+You will be graded on whether you meet the deadlines, whether you attend the office hours for the deadlines, how well you are able to bring your topic down to a first course in commutative algebra level, and how well you stick to the project constraints (5-10 page report, 20 minute presentation).
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Project deadlines:} The dates are when you should meet with me for office hours.  Send the project materials to me before we meet so I have a chance to look at them.
+\begin{itemize}
+\item 18 - 25 Jan: Choose your topic and your group.  If you're unsure about which topic to choose, or if you can't find a group, it's OK, we can discuss it when we meet for office hours.
+\item 13 - 20 Feb: Read the relevant paper or book chapter.  Email me a 1-2 paragraph summary of what you read.
+\item 20 - 27 Feb: Email me an outline of what you plan to cover in your report.
+\item 27 Mar - 3 Apr: Email me the progress on your report.  You should have at least 4-5 pages.
+\item 10 - 17 Apr: Email me your slides.  Practice your talk with me during office hours.  It's best to do this early, so you have time to apply any feedback I give on the slides before your presentation.
+\item 18 Apr: Report is due.  Submit it through email.  (no office hours required)
+\item 18 - 25 Apr: Project presentations.  (no office hours required)  
+\end{itemize}
+
+%\vskip.15in
+\newpage
+\noindent\textbf{Project topics:}
+\begin{enumerate}
+\item Craig Huneke, \textit{Hyman Bass and ubiquity: Gorenstein rings}.  \url{https://arxiv.org/abs/math/0209199}  A very nice expository paper on Gorenstein rings.  Many definitions from commutative algebra are given in this paper, making it a gentle read.  See also Chapter 21 of Eisenbud for more about Gorenstein rings.
+\item David Eisenbud, Mark Green, and Joe Harris, \textit{Cayley-Bacharach theorems and conjectures}.  \url{https://www.ams.org/bull/1996-33-03/S0273-0979-96-00666-0/S0273-0979-96-00666-0.pdf}  The most well-known version of the Cayley-Bacharach theorem says that if a cubic curve passes through eight of the nine intersection points of two other cubic curves, then it necessarily passes through the ninth.  This paper gives a survey of the different incarnations of the Cayley-Bacharach theorem.
+\item John B. Little, \textit{The many lives of the twisted cubic}.  Can be found through the Georgia Tech library.  Look at in particular, section 5.  Traces the history of the twisted cubic curve.
+\item Erwan Brugall\'e and Kristin Shaw, \textit{A bit of tropical geometry}.  Can be found through the Georgia Tech library.  A bit off-topic, but nonetheless interesting.  Tropical geometry was named for the Brazillian who pioneered it.  It has applications in optimization theory and can be used to prove things about classical varieties.
+\item Zvi Rosen, Jessica Sidman, and Louis Theran, \textit{Algebraic matroids in action}.  \url{https://arxiv.org/pdf/1809.00865.pdf}  A matroid is an abstraction of the linearly independent columns of a matrix.  An algebraic matroid can be defined using a prime ideal of a polynomial ring in $n$ variables.
+\item Andrew Bashelor, Amy Ksir, and Will Traves, \textit{Enumerative algebraic geometry of conics}.  \url{https://www.maa.org/programs/maa-awards/writing-awards/enumerative-algebraic-geometry-of-conics}, click on ``Read the Article".  Long paper but light on commutative algebra.  Given $p$ points, $l$ lines, and $c$ conics in the plane, how many conics are there that contain the given points, are tangent to the given lines, and are tangent to the given conics?
+%\item Angélica Benito, Eleonore Faber, and Karen E. Smith, \textit{Measuring singularities with Frobenius: the basics}.  \url{https://arxiv.org/abs/1309.4814} Either Section 2 or Section 3.  The Frobenius map is used to prove things in characteristic $p$.  Section 2 requires a little more background in algebraic geometry.
+%\item Anna Brosowsky, Janet Page, Tim Ryan, and Karen E. Smith, \textit{Geometry of smooth extremal surfaces}.  \url{https://arxiv.org/abs/2110.15908} Good to read if you've had a course in algebraic geometry.
+%\item Will Traves and David Wehlau, \textit{Ten points on a cubic}. \url{https://arxiv.org/abs/2105.12058}  Uses a straightedge to check whether 10 points lie on a cubic curve.  Needs some familiarity with classical projective geometry.
+\item David Eisenbud, \textit{Commutative algebra with a view toward algebraic geometry}.  %Chapters from this textbook are long so it's only expected that you will report on selected sections, giving the basics.  See me for suggestions:
+\begin{enumerate}
+	%\item Chapter 15: Gr\"obner bases
+	\item Chapter 16: Modules of differentials.  Needs some background in differential geometry.  Algebraic analogue to the cotangent bundle.  
+	\item Chapter 17: Regular sequences and the Koszul complex.  Regular sequences give an algebraic analogue to codimension.  Koszul complexes measure whether a sequence is regular.
+	%\item Chapter 18: Depth, codimension, and Cohen-Macaulay rings
+	%\item Chapter 19: Homological theory of regular local rings.  A free resolution measures the dependencies among solutions to a system of equations.
+	%\item Chapter 20: Free resolutions and Fitting invariants
+	%\item Chapter 21: Duality, canonical modules, and Gorenstein rings
+	\item Appendix 3 Part I: Resolutions and derived functors.  Typically covered in a second course on commutative algebra: projective and injective modules, resolutions, complexes, derived functors, Tor and Ext functors.
+	\item Appendix 4: A sketch of local cohomology.  Local cohomology is the algebraic analogue of relative cohomology.  Needs some knowledge about sheaves.  May need Appendix 3 for definitions.  See also Hochster's expository paper, \textit{Finiteness properties and numerical behavior of local cohomology}.
+\end{enumerate}
+\item Hochster's expository papers.  Can be found at \url{http://www.math.lsa.umich.edu/~hochster/mse.html}.  Topics include:
+\begin{enumerate}
+	\item Homological conjectures.  The Direct Summand Conjecture was an open problem for decades that was recently proved using big Cohen-Macaulay modules and perfectoid geometry.  The homological conjectures give stronger statements.  See \textit{Homological conjectures and lim Cohen-Macaulay sequences} and \textit{Homological conjectues, old and new}.  See also \textit{Thirteen Open Questions in Commutative Algebra} for more about the Direct Summand Conjecture.
+	\item Tight closure.  Tight closure is a technique that is useful in shortening difficult proofs in characteristic $p$.  It was pioneered by Hochster and C. Huneke in the 1980s.  Start with \textit{Tight closure theory and characteristic $p$ methods}.  There are a couple more papers about tight closure, including lecture notes.
+	\item Cohen-Macaulay rings.  See the book review for Bruns and Herzog, and \textit{Cohen-Macaulay varieties, geometric complexes and combinatorics}.  The actual book Bruns and Herzog may also be useful.  A Cohen-Macaulay ring is a ring where the algebraic notion of codimension and the geometric notion of codimension coincide.  There are lots of classes of Cohen-Macaulay rings.
+\end{enumerate}
+There are other topics from which to choose, I have only listed the ones that have more than one reference.
+\item Gr\"obner bases.  Useful for testing ideal membership, computing the intersection of two ideals, and computing the annihilator of a module, among other things.  The primary method of computation used in the software \verb+Macaulay2+.  See chapter 15 of Eisenbud and Hochster's two lecture introduction to the subject.
+\item Determinantal rings.  Chapter 7 of Bruns and Herzog.  Determinantal rings are an example of an algebra with straightening law (ASL).  The straightening relations are used to deal with the generators, the minors of an $r\times n$ generic matrix. 
+
+\end{enumerate}
+
+%\begin{center} \begin{minipage}{3.8in}
+%\begin{flushleft}
+%Midterm \#1      \dotfill ~\={A}b\={a}n 16, 1393  \\
+%Midterm \#2      \dotfill ~\={A}zar 21, 1393  \\
+%Project Deadline \dotfill ~Month Day \\
+%Final Exam       \dotfill ~Dey 18, 1393  \\
+%\end{flushleft}
+%\end{minipage}
+%\end{center}
+
+%\vskip.15in
+%\noindent\textbf{Course Policy:}  
+%\begin{itemize}
+%\item Please sign up for AeLP. I will confirm your enrollment for the course, then you will be able to see the course page.
+%\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Class Policy:}  
+%\begin{itemize}
+%\item 
+Regular attendance is essential and expected, especially on quiz days.  %Lectures will be recorded and posted to my website, in case you have to miss class due to COVID.  I will wear a mask during class and I strongly encourage you to do the same.  Masks are provided in the classroom.
+%\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Academic Honesty:}   Lack of knowledge of the academic honesty policy is not a reasonable explanation for a violation.  For more information about the Georgia Tech honor code, visit \url{https://osi.gatech.edu/content/honor-code}.
+
+
+%%%%%% THE END 
+\end{document} 
